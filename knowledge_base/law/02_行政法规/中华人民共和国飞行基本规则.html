@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="SiteName" content="中国民用航空局">	
+<meta name="SiteDomain" content="www.caac.gov.cn">	
+<meta name="SiteIDCode" content="bm70000001">	
+<meta name="ColumnName" content="法律法规">	
+<meta name="ColumnType" content="信息公开">	
+<meta name="ArticleTitle" content="中华人民共和国飞行基本规则">	
+	
+<meta name="ContentSource" content="中国民用航空局">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<link rel="stylesheet" type="text/css" href="../../../images/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../images/all.css" />
+<script type="text/javascript" src="../../../images/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../../images/scroll.js"></script>
+<script type="text/javascript" src="../../../images/select.js"></script>
+<script type="text/javascript" src="../../../images/all.js"></script>
+
+<link rel="icon" href="../../../images/favicon.png" type="image/x-icon" />
+		<link rel="shortcut icon" type="image/x-icon" href="../../../images/favicon.png" />
+
+<script type="text/javascript">
+$(function(){   
+   var zhutiName="行政法规";
+   var zhuti="35";
+   var ex;
+   var idn=zhuti.indexOf(";");
+   if(idn>0){
+      zhuti=zhuti.substring(0,idn);
+   }
+   switch(zhuti)
+   {
+     case "28":
+          ex="<a href=\"../../index_172.html?fl=9\">通知通告</a>-&gt;";
+          break;
+     case "29":
+     case "30":
+     case "31":
+          ex="<a href=\"../../index_172.html?fl=10\">政策发布</a>-&gt;<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+     case "110":
+     case "111":
+     case "112":
+     case "113":
+          ex="<a href=\"../../index_172.html?fl=11\">统计数据</a>-&gt;<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+     case "118":
+     case "119":
+     case "120":
+          ex="<a href=\"../../index_172.html?fl=114\">开放政策</a>-&gt;<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+     case "34":
+     case "35":
+          ex="<a href=\"../../index_172.html?fl=12\">法律法规</a>-&gt;<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+     case "36":
+     case "37":
+     case "38":
+     case "39":
+          ex="<a href=\"../../index_172.html?fl=15\">标准规范</a>-&gt;<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+     case "41":
+     case "42":
+     case "107":
+          ex="<a href=\"../../index_172.html?fl=16\">对外关系</a>-&gt;<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+     case "44":
+          ex="<a href=\"../../index_172.html?fl=19\">财政信息</a>-&gt;";
+          break;
+     case "45":
+          ex="<a href=\"../../index_172.html?fl=21\">重大项目</a>-&gt;";
+          break;
+     case "46":
+     case "47":
+     case "48":
+     case "49":
+          ex="<a href=\"../../index_172.html?fl=22\">行政权利</a>-&gt;<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+     default:
+          ex="<a href=\"../../index_172.html?fl="+zhuti+"\">"+zhutiName+"</a>-&gt;";
+          break;
+
+   }
+   $("#extrasp").html(ex);//加导航
+   if(zhuti=="112"||zhuti=="113"){
+       if("./P020151030499219255126.pdf"!=""){
+       window.location.href="./P020151030499219255126.pdf";
+       } 
+   }
+   if(zhuti=="21"||zhuti=="45"||zhuti=="19"||zhuti=="44"||zhuti=="17"){
+      $("#liwenhao").hide();
+      $("#liyouxiao").addClass("content_nav_left");
+   }
+   else{
+      $("#liwenhao").show();
+   }
+   if(zhuti=="13"){
+      $("#CCAR").html("CCAR");
+   }
+   var bwdw="政策法规司";
+   if(bwdw==""){
+      $("#libwdw").hide();
+      $("#lifwrq").addClass("content_nav_left");
+   }
+   else{
+      $("#libwdw").show();
+   }
+   var fwrq="2001-07-27 00:00:00";
+   if(fwrq==""){
+      $("#lifwrq").hide();      
+   }
+   else{
+      $("#lifwrq").show();
+   }
+//政府信息公开制度
+   var weizhi001="法律法规";
+   if(weizhi001=="政府信息公开制度"){
+      $("#li_ztfl").hide();
+      $("#lifwrq").addClass("special");
+   }
+
+   var wenhao="国务院令第312号";
+   if(wenhao==""||zhuti=="13"){
+      $("#liwenhao").hide();
+      $("#liyouxiao").addClass("content_nav_left");
+   }
+   else{
+      $("#liwenhao").show();
+   }
+   var youxiao="有效";
+   if(youxiao==""||zhuti=="11"||zhuti=="110"||zhuti=="111"||zhuti=="112"||zhuti=="113"){
+      $("#liyouxiao").hide();
+   }
+   else{
+      $("#liyouxiao").show();
+   }
+   var ticai="";
+   if(ticai==""){
+      $("#liTicai").hide();
+   }
+   else{
+      $("#liTicai").show();
+   }
+   var buhao="";
+   if(buhao==""||buhao=="null"){
+      $("#ulBuhao").hide();
+   }   
+   else{
+      $("#ulBuhao").show();
+   }
+
+//规范性文件
+//成文日期
+   if(weizhi001=="规范性文件"){
+      $("#lifwrq").hide();
+      $("#lifwrq2").show();//
+      $("#lichengwen").show();
+      $("#lichengwen").addClass("content_nav_left");
+      $("#liyouxiao").hide();
+      $("#liyouxiao2").show();
+      if($("#normWenHaoInput").val().length>0){
+      $("#normWenHao").show(); //行政规范性文件字号
+      }
+   }
+
+})
+</script>
+    <style type="text/css">
+           a:hover{color: #006bd9;}
+           .n_list .li_noLine a:hover{text-decoration: none;}
+    </style>
+
+<title>中华人民共和国飞行基本规则</title>
+</head>
+<body>
+<div class="wrap">
+  <!--top-->
+
+    <style type="text/css">
+.t_search input{font-family:Microsoft Yahei, Arial, Helvetica, sans-serif}
+.action_move{margin-top:4px}
+.action_move i{margin-top:-2px} 
+/*.nav li a {
+    width: 106.6px;
+}*/
+</style>
+<div style="display:none"><img src="/images/weixinLogo.jpg" /></div>
+<div style="background-color:#edebe9;opacity: 0.8;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); -moz-opacity:0.8;">
+<div class="user_action top" style="padding:0px;height:30px;float:none;">        
+         <div style="float:left;margin-top: 3px;"> 
+        	<li class="chinese" style="line-height:25px;"><fjtignoreurl><a class="chinese" href="http://www.caac.gov.cn/INDEX/">简体中文</a></fjtignoreurl></li> 
+          <li class="chinese" style="line-height:25px;"><a class="chinese" href="http://www.caac.gov.cn/big5/www.caac.gov.cn">繁体中文</a></li>
+          <li class="chinese" style="line-height:25px;"><fjtignoreurl><a class="chinese" href="http://www.caac.gov.cn/English/Home/" target="_blank">ENGLISH</a></fjtignoreurl></li>
+          <li class="chinese" style="line-height:25px;"><fjtignoreurl><a class="chinese special" href="http://www.caac.gov.cn/INDEX/YDKHDXZ/" target="_blank">移动客户端</a></fjtignoreurl></li>
+          
+        </div >
+        <div style="float:right;margin-right:23px;">
+          <li class="action_move"><a href="https://mail.caac.gov.cn" target="_blank"><i class="t_mail d_inline"></i>政府邮箱</a></li>
+          <li class="action_move"><a href="http://www.caac.gov.cn/INDEX/GZPT/"  target="_blank"><i class="t_work d_inline"></i>工作平台入口</a></li>          
+          <li class="action_move" style="line-height: 24px;"><a id="toolbarSwitch" href="javascript:void(0);">【无障碍浏览】</a></li>   
+        </div>
+       </div>
+      </div>
+<div class="top" style="margin-top: 13px;height: 95px; ">
+    <form class="headForm" action="http://www.caac.gov.cn/so/s?tab=all&siteCode=bm70000001" name="searchBar" method="get" accept-charset="utf-8" target="_blank" onsubmit="return toSearchVaild()">
+      <input id="siteCode" name="siteCode" value="bm70000001" autocomplete="off" type="hidden" />
+      <input id="tab" name="tab" value="xxgk" autocomplete="off" type="hidden" />
+      <div class="logo" style="margin-top: 12px;"></div>
+      <div class="t_search" style="margin-top:52px;height:30px;margin-right:5px">
+             <input type="text" style="width:310px;" id="textfield" class="t_input_txt" name="qt" value="" />
+            <button id="caacSerch" class="t_search_btn" style="height:24px;line-height:24px;">搜索</button>
+      </div>
+    </form>
+  </div>
+  <!--end top-->
+  <div class="nav" style="margin-top: 14px;">
+    <ul>
+      <li><a id="SY" href="../../../../INDEX/">首&nbsp;页</a></li>
+      <li><a id="XWZX" href="../../../../XWZX/">新闻中心</a></li>
+      <li><a id="XXGK" class="on" href="../../">信息公开</a></li>
+      <li><a id="FWDT" href="../../../../FWDT/">办事大厅</a></li>
+    <li style="display: none;"><a id="AQJG" href="../../../../AQJG/">安全监管</a></li>
+	  <li><a id="HDJL" href="../../../../HDJL/">互动交流</a></li>
+	  <li><a id="ZTZL" href="../../../../ZTZL/">专题专栏</a></li>
+	  <li><a id="GYMH" href="../../../../GYMH/">关于民航</a></li>
+	  <li><a id="WHMH" href="../../../../WHMH/" class="caac">我和民航</a></li>
+    </ul>
+  </div>
+<script type="text/javascript" src="../../../images/search.js"></script>
+  <script src="../../../images/yahoo-dom-event.js" type="text/javascript"></script>
+  <script src="../../../images/suggest-yui2.js" type="text/javascript"></script>
+
+
+  <script type="text/javascript">
+function toSearchVaild(){
+    if(isnull($("#textfield").val())){
+        alert("请输入关键字");
+        return false;
+    }
+    return true;
+}
+    function isnull(val) {
+
+        var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+
+        if (str == '' || str == undefined || str == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //gethotkeyword();
+    //$(".headForm").attr("action", config.searchPageURL);
+    init();
+
+
+    function init() {      
+
+      $(".t_search_btn").click(function() {
+        var channelid = $(".channelid").val();
+        var keyword = $(".t_input_txt").val();
+        createlog(keyword, channelid);
+      });
+    }
+
+    var dataUrl = config.searchPageURL_Suggest+'/caacSuggest.jsp?result=false';
+    new TRSWAS.Suggest('textfield', dataUrl, {
+      useShim: false,
+      resultFormat: '约%result%条结果'
+    });
+  </script>
+
+  <!--main-->
+  <div class="wrap_w p_t30">
+     <div class="path_bar"  style="display:none"><a href="../../../../INDEX/">首页</a>-&gt;<a href="../../">信息公开</a>-&gt;<span id="extrasp"></span><span class="c_yellow">正文</span></div>
+	<div class="clearfix">
+	  <div class="a_right">
+            
+                <div class="n_list" >
+                    <ul id="ulRel">
+                        
+                    </ul>
+                </div>	   
+                
+	        <div class="n_tit"><span class="d_inline">热点信息<i></i></span></div>
+	   <div class="n_list">
+	     <ul id="hotDoc">     
+                 
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202607/t20260715_231267.html" target="_blank"  title="2026年全国民航年中工作电视电话会议召开">2026年全国民航年中工作电视电话会议召开
+                       </a><span class="f_r n_date">2026-07-15</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202607/t20260710_231246.html" target="_blank"  title="民航局党组理论学习中心组举行集体学习">民航局党组理论学习中心组举行集体学习
+                       </a><span class="f_r n_date">2026-07-10</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202607/t20260703_231213.html" target="_blank"  title="民航局党组召开树立和践行正确政绩观学习教育党课报告会暨深化模范机关建设推进会">民航局党组召开树立和践行正确政绩观学习教育党课报告会暨深化模范机关建设推进会
+                       </a><span class="f_r n_date">2026-07-02</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202607/t20260702_231211.html" target="_blank"  title="《关于加强残疾人航空运输保障能力的若干措施》印发">《关于加强残疾人航空运输保障能力的若干措施》印发
+                       </a><span class="f_r n_date">2026-07-02</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202607/t20260701_231209.html" target="_blank"  title="宋志勇会见英国交通大臣">宋志勇会见英国交通大臣
+                       </a><span class="f_r n_date">2026-07-01</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202606/t20260626_231160.html" target="_blank"  title="胡振江会见霍尼韦尔航空航天商业售后市场全球总裁">胡振江会见霍尼韦尔航空航天商业售后市场全球总裁
+                       </a><span class="f_r n_date">2026-06-26</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202606/t20260623_231130.html" target="_blank"  title="宋志勇与香港民航业界座谈交流">宋志勇与香港民航业界座谈交流
+                       </a><span class="f_r n_date">2026-06-23</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:217px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/202606/t20260616_231089.html" target="_blank"  title="胡振江会见波音民机集团飞机项目与客户支持高级副总裁兼总经理迈克·弗莱明">胡振江会见波音民机集团飞机项目与客户支持高级副总裁兼总经理迈克·弗莱明
+                       </a><span class="f_r n_date">2026-06-16</span></li> 
+		 </ul>
+	   </div>
+                <!--hot-->
+                <style type="text/css">
+     .h_panel li a{width:80px;text-align:center;font-size:15px;}
+     .h_panel{padding-left:2px;padding-right:0px;}
+     .h_panel li{margin-bottom:12px;margin: 1px;}
+</style>
+<div class="h_panel m_t30">
+	     <h2 style="padding-left:15px;">热点栏目</h2>
+		 <ul>
+		   <li><a href="../../../../XWZX/MHYW/" target="_blank">民航要闻</a></li>
+		   <li><a href="" target="_blank">通知公告</a></li>
+		   <li><a href="" target="_blank">民航规章</a></li>
+		   <li><a href="" target="_blank">统计数据</a></li>
+                   <li><a href="../../../../FWDT/" target="_blank">服务指南</a></li>
+		   <li><a href="../../../../XWZX/HYDT/" target="_blank">行业动态</a></li>
+                     <li><a href="" target="_blank">政策解读</a></li>
+		   <li><a href="../../../../INDEX/HLFW/HKLXCS/" target="_blank">航旅指南</a></li>
+                   <li><a href="../../../../ZTZL/RDZT/" target="_blank">热点专题</a></li>
+		 </ul>
+	   </div>
+         <script type="text/javascript">
+        	//getHotColumn();
+         </script>
+	  </div>
+	  <div class="a_left">
+      	<div class="content_nav">
+        	<ul id="li_ztfl">            	
+                <li class="content_nav_left special"><b>主题分类：</b>行政法规</li>
+                <li class="special" id="liTicai" style="display:none"><b>体裁分类：</b></li>
+            </ul>
+            <ul>
+            	<li class="content_nav_left" id="libwdw" style="display:none"><b>办文单位：</b>政策法规司</li>
+                <li id="lifwrq" style="display:none"><b>发文日期：</b>2001-07-27</li>
+                <li id="lichengwen" style="display:none"><b>成文日期：</b></li>
+            </ul>
+            <ul>
+                  <li id="lifwrq2" class="content_nav_left" style="display:none"><b>发文日期：</b>2001-07-27</li>
+                <li id="liyouxiao2" class="" style="display:none"><b>有效性：</b>有效</li>
+            </ul>
+
+            <ul>
+            	<li class="content_nav_left" style="height:100%;width:8%"><b>名称：</b></li><li style="height:100%;width:87%">中华人民共和国飞行基本规则</li>
+                
+            </ul>
+            <ul>
+                <li id="normWenHao" class="content_nav_left" style="display:none"><b>字号：</b></li>
+<input id="normWenHaoInput" type="hidden" value='' />
+            </ul>
+            <ul>
+            	<li class="content_nav_left" id="liwenhao" style="display:none"><b>文号：</b>国务院令第312号</li>
+                <li id="liyouxiao" style="display:none"><b>有效性：</b>有效</li>
+
+            </ul>
+
+            <ul id="ulBuhao" style="display:none">
+            	<li class="content_nav_left"><b><span id="CCAR"></span>部号：</b></li>                
+            </ul>
+        </div>
+        <div class="content_t">中华人民共和国飞行基本规则</div>
+		<div class="content_info" style="line-height: 28px">
+		  <span class="p_r20" style="padding-right: 230px;">来源：中国民航局</span>		  
+		  <span class="p_r20">字体：<a class="c_gray" data-role="fontSize" id="font_big">大</a> ｜ <a class="c_yellow" data-role="fontSize" id="font_middle">中</a> ｜ <a class="c_gray" data-role="fontSize" id="font_small">小</a> </span>
+		  <a href="#" onclick="window.print()" class="p_r20 c_gray">打印本页</a>
+		  <div style="width: 85px;height: 28px;display: inline-block;float: right;">
+                        <div>
+							<span style="float: left;line-height: 28px; padding: 0 5px;">分享到：</span>
+<a id="shareView" href="javascript:void(0)" tangram_guid="TANGRAM_29" data-cmd="more" style="background-position: 0 0!important;width: 3px;float: left;font-size: 12px;padding-left: 17px;line-height: 16px;height: 16px;	background-image: url(/images/jiahaotubiao.png);background-repeat: no-repeat;cursor: pointer;	margin: 6px 6px 6px 0;"></a>
+						</div>
+                    </div>
+		</div>
+		<div class="content" data-role="n_content" >
+                 
+		  <p>　　<strong>第一章　 总则</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一条　 为了维护国家领空主权，规范中华人民共和国境内的飞行活动，保障飞行活动安全有秩序地进行，制定本规则。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二条　 凡辖有航空器的单位、个人和与飞行有关的人员及其飞行活动，必须遵守本规则。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三条　 国家对境内所有飞行实行统一的飞行管制。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四条　 国务院、中央军事委员会空中交通管制委员会领导全国的飞行管制工作。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五条　 航空单位的负责人对本单位遵守本规则负责。机长对本空勤组成员遵守本规则负责。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六条　 各航空单位在组织与实施飞行中，应当协调配合，通报有关情况。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七条　 组织与实施飞行，应当按照飞行预先准备、飞行直接准备、飞行实施和飞行讲评等阶段进行。飞行阶段的具体内容和要求，由各航空管理部门自行规定。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八条　 与飞行有关的所有单位、人员负有保证飞行安全的责任，必须遵守有关规章制度，积极采取预防事故的措施，保证飞行安全。</p>
+<p>　　经过批准的飞行，有关的机场和部门应当认真做好组织指挥和勤务保障工作。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九条　 飞行人员在飞行中，必须服从指挥，严格遵守纪律和操作规程，正确处置空中情况。遇到特殊情况，民用航空器的机长，为保证民用航空器及其所载人员的安全，有权对民用航空器作出处置；非民用航空器的机长（或者单座航空器飞行员，下同）在不能请示时，对于航空器的处置有最后决定权。</p>
+<p style="margin: 0px">　　第十条　 各航空管理部门制定与飞行有关的规范，应当符合本规则的规定。</p>
+<p style="margin: 0px">　　<strong>第二章　 空域管理</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十一条　 空域管理应当维护国家安全，兼顾民用、军用航空的需要和公众利益，统一规划，合理、充分、有效地利用空域。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十二条　 空域的划设应当考虑国家安全、飞行需要、飞行管制能力和通信、导航、雷达设施建设以及机场分布、环境保护等因素。</p>
+<p>　　空域通常划分为机场飞行空域、航路、航线、空中禁区、空中限制区和空中危险区等。空域管理和飞行任务需要的，可以划设空中走廊、空中放油区和临时飞行空域。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十三条　 空域的划设、调整，应当按照国家有关规定履行审批、备案手续。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十四条　 机场飞行空域应当划设在航路和空中走廊以外。仪表（云中）飞行空域的边界距离航路、空中走廊以及其他空域的边界，均不得小于10公里。</p>
+<p>　　机场飞行空域通常包括驾驶术（特技、编队、仪表）飞行空域、科研试飞飞行空域、射击飞行空域、低空飞行空域、超低空飞行空域、海上飞行空域、夜间飞行空域和等待空域等。</p>
+<p>　　等待空域通常划设在导航台上空；飞行活动频繁的机场，可以在机场附近上空划设。等待空域的最低高度层，距离地面最高障碍物的真实高度不得小于600米。8400米以下，每隔300米为一个等待高度层；8400米以上，每隔600米为一个等待高度层。机场飞行空域的划设，由驻机场航空单位提出方案，报所在地区的中国人民解放军军级航空单位或者军区空军批准。</p>
+<p>　　相邻机场之间飞行空域可以相互调整使用。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十五条　 航路分为国际航路和国内航路。</p>
+<p>　　航路的宽度为20公里，其中心线两侧各10公里；航路的某一段受到条件限制的，可以减少宽度，但不得小于8公里。航路还应当确定上限和下限。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十六条　 航线分为固定航线和临时航线。</p>
+<p>　　临时航线通常不得与航路、固定航线交叉或者通过飞行频繁的机场上空。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十七条　 国家重要的政治、经济、军事目标上空，可以划设空中禁区、临时空中禁区。</p>
+<p>　　未按照国家有关规定经特别批准，任何航空器不得飞入空中禁区和临时空中禁区。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十八条　 位于航路、航线附近的军事要地、兵器试验场上空和航空兵部队、飞行院校等航空单位的机场飞行空域，可以划设空中限制区。根据需要还可以在其他地区上空划设临时空中限制区。在规定时限内，未经飞行管制部门许可的航空器，不得飞入空中限制区或者临时空中限制区。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第十九条　 位于机场、航路、航线附近的对空射击场或者发射场等，根据其射向、射高、范围，可以在上空划设空中危险区或者临时空中危险区。</p>
+<p>　　在规定时限内，禁止无关航空器飞入空中危险区或者临时空中危险区。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十条　 空中禁区、空中限制区、空中危险区的划设、变更或者撤消，应当根据需要公布。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十一条　 空中走廊通常划设在机场密集的大、中城市附近地区上空。</p>
+<p>　　空中走廊的划设应当明确走向、宽度和飞行高度，并兼顾航空器进离场的便利。</p>
+<p>　　空中走廊的宽度通常为10公里，其中心线两侧各5公里。受条件限制的，其宽度不得小于8公里。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十二条　 空中放油区的划设，按照国家有关规定执行。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十三条　 临时飞行空域的划设，由申请使用空域的航空单位提出方案，经有关飞行管制部门划定，并通报有关单位。</p>
+<p>　　国（边）境线至我方一侧10公里之间地带上空禁止划设临时飞行空域。通用航空飞行特殊需要时，经所在地大军区批准后由有关飞行管制部门划设。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十四条　 在机场区域内必须严格执行国家有关保护机场净空的规定，禁止在机场附近修建影响飞行安全的射击靶场、建筑物、构筑物、架空线路等障碍物体。</p>
+<p>　　在机场及其按照国家规定划定的净空保护区域以外，对可能影响飞行安全的高大建筑物或者设施，应当按照国家有关规定设置飞行障碍灯和标志，并使其保持正常状态。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十五条　 在距离航路边界30公里以内的地带，禁止修建影响飞行安全的射击靶场和其他设施。</p>
+<p>　　在前款规定地带以外修建固定或者临时靶场，应当按照国家有关规定获得批准。靶场射击或者发射的方向、航空器进入目标的方向不得与航路交叉。</p>
+<p style="margin: 0px">　　第二十六条　 修建各种固定对空射击场或者炮兵射击靶场，必须报国务院、中央军事委员会批准。设立临时性靶场和射击点，经有关飞行管制部门同意后，由设立单位报所在省、自治区、直辖市人民政府和大军区审查批准。　 固定或者临时性的对空射击场、发射场、炮兵射击靶场、射击点的管理单位，应当负责与所在地区飞行管制部门建立有效的通信联络，并制定协同通报制度；在射击或者发射时，应当进行对空观察，确保飞行安全。</p>
+<p>　　第二十七条　 升放无人驾驶航空自由气球或者可能影响飞行安全的系留气球，须经有关飞行管制部门批准。具体管理办法由国务院、中央军事委员会空中交通管制委员会会同国务院民用航空主管部门、中国人民解放军空军拟定，报国务院、中央军事委员会批准实施。</p>
+<p style="margin: 0px">　　<strong>第三章　 飞行管制</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十八条　 中华人民共和国境内的飞行管制，由中国人民解放军空军统一组织实施，各有关飞行管制部门按照各自的职责分工提供空中交通管制服务。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第二十九条　 飞行管制的基本任务是：</p>
+<p>　　（一）监督航空器严格按照批准的计划飞行，维护飞行秩序，禁止未经批准的航空器擅自飞行；</p>
+<p>　　（二）禁止未经批准的航空器飞入空中禁区、临时空中禁区或者飞出、飞入国（边）境；</p>
+<p>　　（三）防止航空器与航空器、航空器与地面障碍物相撞；</p>
+<p>　　（四）防止地面对空兵器或者对空装置误射航空器。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十条　 在中华人民共和国境内，按照飞行管制责任划分为：飞行管制区、飞行管制分区、机场飞行管制区。</p>
+<p>　　航路、航线地带和民用机场区域设置高空管制区、中低空管制区、终端（进近）管制区、机场塔台管制区。</p>
+<p>　　在中华人民共和国境内、毗连区、专属经济区及其毗连的公海的上空划分若干飞行情报区。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十一条　 各类管制区的划设，应当按照国家有关规定审批。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十二条　 各类管制区的飞行管制，由有关飞行管制部门按照职责分工实施。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十三条　 中华人民共和国境内特定地区以及执行特殊任务的飞行，应当执行特种飞行管制规定。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十四条　 担负飞行管制任务的航空管理部门及航空单位，应当按照各自的职责权限，根据本规则制定飞行管制的具体实施办法。</p>
+<p>　　相关飞行管制部门之间，应当制定协同制度。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十五条　 所有飞行必须预先提出申请，经批准后方可实施。</p>
+<p>　　获准飞出或者飞入中华人民共和国领空的航空器，实施飞出或者飞入中华人民共和国领空的飞行和各飞行管制区间的飞行，必须经中国人民解放军空军批准；飞行管制区内飞行管制分区间的飞行，经负责该管制区飞行管制的部门批准；飞行管制分区内的飞行，经负责该分区飞行管制的部门批准。</p>
+<p>　　民用航空的班期飞行，按照规定的航路、航线和班期时刻表进行；民用航空的不定期运输飞行，由国务院民用航空主管部门批准，报中国人民解放军空军备案；涉及其他航空管理部门的，还应当报其他航空管理部门备案。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十六条　 战斗飞行按照战斗命令执行，飞机起飞前或者起飞后必须及时通报飞行管制部门。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十七条　 对未经批准而起飞或者升空的航空器，有关单位必须迅速查明情况，采取必要措施，直至强迫其降落。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十八条　 转场航空器的起飞，机场区域内、外飞行的开始和结束，均应当遵守预定的时间；需要提前或者推迟起飞时间的，应当经上一级飞行管制部门的许可。转场航空器超过预定起飞时间一小时仍未起飞，又未申请延期的，其原飞行申请失效。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第三十九条　 组织与实施通用航空飞行活动，必须按照有关规定履行报批手续，并向当地飞行管制部门提出飞行申请。飞行申请的内容包括：任务性质、航空器型别、飞行范围、起止时间、飞行高度和飞行条件等。各航空单位应当按照批准的飞行计划组织实施。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十条　 航空器飞入相邻管制区前，飞行管制部门之间应当进行管制移交。管制移交应当按照程序管制或者雷达管制的有关规定实施。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十一条　 在中华人民共和国领空飞行的航空器，必须标明明显的识别标志，禁止无识别标志的航空器飞行。</p>
+<p>　　无识别标志的航空器因特殊情况需要飞行的，必须经中国人民解放军空军批准。</p>
+<p>　　航空器的识别标志，必须按照国家有关规定获得批准。</p>
+<p style="margin: 0px">　　第四十二条　 空中交通管制员、飞行指挥员（含飞行管制员，下同）应当按照国家有关规定，经过专门培训、考核，取得执照、证书后，方可上岗工作。</p>
+<p style="margin: 0px">　　<strong>第四章　 机场区域内飞行</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十三条　 机场区域是指机场和为该机场划定的一定范围的设置各种飞行空域的空间。</p>
+<p>　　机场区域应当根据机场周围的地形，使用该机场的航空器的型别和任务性质，邻近机场的位置和跑道方向，机场附近的国（边）境、空中禁区、对空射击场或者发射场、航路和空中走廊的位置，以及公众利益和安全保障等因素划定。</p>
+<p>　　相邻机场距离过近的，可以合划一个机场区域。</p>
+<p>　　机场区域的界线通常与机场飞行（塔台）管制区的界线相同。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十四条　 机场区域内飞行，应当遵守机场使用细则。</p>
+<p>　　机场使用细则的制定、审批和备案，按照国家有关规定执行。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十五条　 飞行人员飞行时，必须按照规定携带必备的资料、文书和证件。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十六条　 飞行准备以及保障飞行的准备工作，必须在飞行开始前完成。在各项准备和天气情况符合飞行要求时，飞行方可开始。</p>
+<p>　　接受转场飞行航空器降落的机场，必须在航空器到达机场30分钟以前，做好保障降落的各项准备工作。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十七条　 昼间飞行，在航空器起飞、降落前，水平能见度小于2公里的，应当打开机场全部障碍标志灯；水平能见度小于1公里的，起飞时还应当打开跑道灯，着陆时还应当打开航空器着陆方向（着陆的反航向）上保障飞行的全部灯光。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十八条　 飞行人员自起飞前开车起到着陆后关车止，必须同空中交通管制员或者飞行指挥员保持无线电通信联络，并且严格遵守通信纪律。</p>
+<p>　　未配备无线电通信设备或者通信设备发生故障的航空器，按照本规则附件一的规定进行联络。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第四十九条　 飞行员开车滑行，必须经空中交通管制员或者飞行指挥员许可。滑行或者牵引时，应当遵守下列规定：</p>
+<p>　　（一）按照规定的或者空中交通管制员、飞行指挥员指定的路线滑行或者牵引。</p>
+<p>　　（二）滑行速度应当按照相应航空器的飞行手册或者飞行员驾驶守则执行；在障碍物附近滑行，速度不得超过每小时15公里。</p>
+<p>　　（三）航空器对头相遇，应当各自靠右侧滑行，并且保持必要的安全间隔；航空器交叉相遇，飞行员从座舱左侧看到另一架航空器时应当停止滑行，主动避让。</p>
+<p>　　（四）两架以上航空器跟进滑行，后航空器不得超越前航空器，后航空器与前航空器的距离，不得小于50米。</p>
+<p>　　（五）夜间滑行或者牵引，应当打开航空器上的航行灯。</p>
+<p>　　（六）直升机可以用1米至10米高度的飞行代替滑行。</p>
+<p>　　水上航空器在滑行或者牵引中，与船只对头或者交叉相遇，应当按照航空器滑行或者牵引时相遇的避让方法避让。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十条　 通常情况下，准备起飞的航空器，在起落航线第四转弯后无其他航空器进入着陆时，经空中交通管制员或者飞行指挥员许可，方可滑进跑道；跑道上无障碍物，方准起飞。</p>
+<p>　　航空器起飞、着陆时，后航空器应当与前航空器保持规定的安全间隔。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十一条　 机场的起落航线通常为左航线；若因地形、城市等条件的限制，或者为避免同邻近机场的起落航线交叉，也可以为右航线；起落航线的飞行高度，通常为300米至500米。</p>
+<p>　　进行起落航线飞行时，禁止超越同型航空器；各航空器之间的距离，一般应当保持在1500米以上；经空中交通管制员或者飞行指挥员许可，速度大的航空器可以在第三转弯前超越速度小的航空器，超越时应当从前航空器的外侧超越，其间隔不得小于200米。除必须立即降落的航空器外，任何航空器不得从内侧超越前航空器。</p>
+<p>　　加入起落航线飞行必须经空中交通管制员或者飞行指挥员许可，并且应当顺沿航线加入，不得横向截入。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十二条　 航空器起飞后在机场区域内上升或者降落前在机场区域内下降，必须按照空中交通管制员或者飞行指挥员的指示进行。</p>
+<p>　　航空器飞离机场加入航路、航线和脱离航路、航线飞向机场，应当按照该机场使用细则或者进离场程序规定的航线和高度上升或者下降。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十三条　 相邻机场的穿云上升航线、穿云下降航线互有交叉，飞行发生矛盾时，由负责该地区飞行管制的部门调整。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十四条　 航空器进行空域飞行时，应当按照规定的航线（航向）、高度、次序进入空域或者脱离空域，并且保持在规定的空域和高度范围内飞行。</p>
+<p>　　除等待空域外，一个飞行空域，在同一个时间内，只允许安排一至三批航空器飞行。各批航空器飞行活动的高度范围之间，通常应当保持2000米以上的高度差。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十五条　 目视飞行时，飞行人员必须加强空中观察。航空器应当与云保持一定的水平距离和垂直距离。</p>
+<p>　　机长对目视飞行的安全负直接责任。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十六条　 航空器进入着陆，应当经空中交通管制员或者飞行指挥员许可；不具备着陆条件的，不得勉强着陆。</p>
+<p>　　航空器着陆后，应当迅速脱离跑道。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十七条　 飞行人员在复杂气象条件下按仪表飞行，必须同时具备下列条件：</p>
+<p>　　（一）飞行人员掌握复杂气象飞行技术；</p>
+<p>　　（二）航空器配备有完好的航行设备和无线电通信设备。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十八条　 复杂气象条件下进入机场区域的飞行，必须经空中交通管制员或者飞行指挥员许可。空中交通管制员或者飞行指挥员允许航空器飞入机场区域时，应当及时向飞行员通报下列情况：</p>
+<p>　　（一）进入的飞行高度；</p>
+<p>　　（二）机场区域内有关的飞行情况；</p>
+<p>　　（三）水平能见度或者跑道视程、天气现象和机场上空的云底高度，地面和穿云高度上的风向、风速，场面气压或者修正海平面气压，或者零点高度，以及地面大气温度；</p>
+<p>　　（四）仪表进场或者穿云方法和着陆航向。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第五十九条　 航空器在等待空域内，必须保持在规定的等待高度层并且按照空中交通管制员或者飞行指挥员指示的方法飞行，未经许可，不得自行改变。</p>
+<p>　　在等待空域内等待降落的航空器，应当按照规定的顺序降落。特殊情况下，经空中交通管制员或者飞行指挥员许可，方可优先降落。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十条　 航空器穿云下降必须按照该机场的仪表进近图或者穿云图进行。当下降到规定的最低高度或者决断高度仍不能以目视进行着陆时，应当立即停止下降，并且按照规定的航向上升至安全高度。</p>
+<p>　　航空器因故不能在该机场降落的，空中交通管制员、飞行指挥员或者航空公司签派员及其代理人，应当立即通知备降机场准备接受航空器降落，同时指示航空器飞往备降机场的航向、飞行高度和通知备降机场的天气情况。在飞行人员同备降机场沟通无线电联络并且报告在备降机场着陆已有保障以前，空中交通管制员、飞行指挥员或者航空公司签派员及其代理人应当继续与该航空器保持联络。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十一条　 航空器飞临降落机场时，机场的天气情况低于机长飞行的最低气象条件，且航空器无法飞往备降机场的，空中交通管制员或者飞行指挥员应当采取一切措施，指挥航空器安全降落。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十二条　 飞机在空中拖曳滑翔机时，拖曳飞机同滑翔机应当视为一个航空器。滑翔机飞行员应当服从拖曳飞机飞行员的指挥。</p>
+<p>　　滑翔机在空中脱离拖曳，必须在规定的高度上进行，并且经拖曳飞机飞行员同意，但紧急情况除外。</p>
+<p style="margin: 0px">　　第六十三条　 机场区域内飞行的开始和结束的时间，其他任务飞行的航空器在该机场起飞和降落的时间，均应当及时报告上级飞行管制部门。</p>
+<p>　　相邻机场应当互相主动通报有关的飞行情况。</p>
+<p style="margin: 0px">　　<strong>第五章　 航路和航线飞行</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十四条　 航空器使用航路和航线，应当经负责该航路和航线的飞行管制部门同意。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十五条　 航路和固定航线地带应当设置必要的监视和导航设备。</p>
+<p>　　沿航路和固定航线应当有备降机场。备降机场应当有必备的设备和良好的通信、导航、气象保障。</p>
+<p>　　军用机场作为民用航空器的固定备降机场或者民用机场作为军用航空器的固定备降机场，应当按照国家有关规定经过批准。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十六条　 穿越航路和航线的飞行，应当明确穿越的地段、高度和时间，穿越时还应当保证与航路和航线飞行的航空器有规定的飞行间隔。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十七条　 飞行任务书是许可飞行人员进行转场飞行和民用航空飞行的基本文件。飞行任务书由驻机场航空单位或者航空公司的负责人签发。</p>
+<p>　　在飞行任务书中，应当明确飞行任务、起飞时间、航线、高度、允许机长飞行的最低气象条件以及其他有关事项。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十八条　 航路、航线飞行或者转场飞行前，驻机场航空单位或者航空公司的负责人应当亲自或者指定专人对飞行人员的飞行准备情况进行检查。飞行准备质量符合要求时，方可执行飞行任务。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第六十九条　 航路、航线飞行或者转场飞行的航空器的起飞，应当根据飞行人员和航空器的准备情况，起飞机场、降落机场和备降机场的准备情况以及天气情况等确定；有下列情况之一的，不得起飞：</p>
+<p>　　（一）空勤组成员不齐，或者由于技术、健康等原因不适于飞行的；</p>
+<p>　　（二）飞行人员尚未完成飞行准备、飞行准备质量不符合要求、驻机场航空单位或者航空公司的负责人未批准飞行的；</p>
+<p>　　（三）飞行人员未携带飞行任务书、飞行气象文件及其他必备飞行文件的；</p>
+<p>　　（四）飞行人员未校对本次飞行所需的航行、通信、导航资料和仪表进近图或者穿云图的；</p>
+<p>　　（五）航空器或者航空器上的设备有故障可能影响飞行安全，或者民用航空器设备低于最低设备清单规定，或者军用航空器经机长确认可能影响本次飞行安全的；</p>
+<p>　　（六）航空器表面的冰、霜、雪未除净的；</p>
+<p>　　（七）航空器上的装载和乘载不符合规定的；</p>
+<p>　　（八）航空器未按规定携带备用燃料的；</p>
+<p>　　（九）天气情况低于机长飞行的最低气象条件，以及天气情况危及本次飞行安全的。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十条　 飞行人员在飞行中必须遵守有关的飞行规则和飞行任务书中的各项规定，服从飞行指挥，准确实施领航，保持规定的航行诸元，注意观察空中情况，按照规定及时报告航空器位置、飞行情况和天气情况，特别是危险天气现象及其发展情况。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十一条　 目视飞行时，航空器应当按照下列规定避让：</p>
+<p>　　（一）在同一高度上对头相遇，应当各自向右避让，并保持500米以上的间隔；</p>
+<p>　　（二）在同一高度上交叉相遇，飞行员从座舱左侧看到另一架航空器时应当下降高度，从座舱右侧看到另一架航空器时应当上升高度；</p>
+<p>　　（三）在同一高度上超越前航空器，应当从前航空器右侧超越，并保持500米以上的间隔；</p>
+<p>　　（四）单机应当主动避让编队或者拖曳飞机，有动力装置的航空器应当主动避让无动力装置的航空器，战斗机应当主动避让运输机。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十二条　 在与航路、固定航线交叉或者靠近的临时航线飞行时，飞行人员应当加强对空中的观察，防止与航路飞行的航空器相撞。当临时航线与航路、固定航线交叉时，水平能见度大于8公里的，应当按照规定的飞行高度通过；在云中飞行或者水平能见度小于8公里的，应当按照空中交通管制员或者飞行指挥员的指示通过。在靠近航路的航线上飞行时，应当与航路的边界保持规定的安全间隔。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十三条　 未配备复杂气象飞行设备的航空器，机长应当按照规定的飞行最低气象条件，在安全高度以上进行目视飞行，防止飞入云中。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十四条　 当天气情况不低于机长飞行的最低气象条件时，机长方可在300米以下进行目视飞行，飞行时航空器距离云层底部不得小于50米。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十五条　 航空器沿航路和固定航线飞行通过中途机场100至50公里前，除有协议的外，飞行人员应当向该机场的空中交通管制员或者飞行指挥员报告预计通过的时间和高度。中途机场的空中交通管制员或者飞行指挥员必须指挥在本机场区域内飞行的航空器避让过往航空器，保证其安全通过；无特殊原因，不得改变过往航空器的航线和高度。</p>
+<p>　　航空器在临时航线飞行通过中途机场时，应当按照规定的航线和高度通过，或者按照该机场空中交通管制员或者飞行指挥员的指示通过。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十六条　 飞行中，飞行人员与地面联络中断，可以停止执行飞行任务，返回原机场或者飞往就近的备降机场降落。当保持原高度飞向备降机场符合飞行高度层配备规定时，仍保持原高度飞行；当保持原高度飞向备降机场不符合飞行高度层配备规定时，应当下降到下一层高度飞向备降机场；因飞行安全高度所限不能下降到下一层高度的，应当上升至上一层高度飞向备降机场。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十七条　 航路、航线飞行或者转场飞行的航空器，在起飞前或者在中途机场降落后需要继续飞行的，机长或者其代理人必须到机场飞行管制部门办理飞行手续，校对有关资料，经批准后方可起飞；航空器降落后需要连续起飞的，必须事先经中途机场飞行管制部门的许可。</p>
+<p>　　航路、航线飞行或者转场飞行的航空器降落后，机长或者其代理人必须到机场飞行管制部门或者航空公司报告飞行情况和航路、航线天气情况，送交飞行任务书和飞行天气报告表。</p>
+<p>　　未经批准而降落在非预定机场的航空器，必须由驻该机场航空单位的负责人向上级报告，经批准后方可起飞。</p>
+<p style="margin: 0px">　　第七十八条　 航路、航线飞行或者转场飞行的航空器到达预定机场后，其各项保障工作由驻该机场的有关部门按照规定或者协议负责。</p>
+<p style="margin: 0px">　　<strong>第六章　 飞行间隔</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第七十九条　 飞行间隔是为了防止飞行冲突，保证飞行安全，提高飞行空间和时间利用率所规定的航空器之间应当保持的最小安全距离。飞行间隔包括垂直间隔和水平间隔。水平间隔分为纵向间隔和横向间隔。</p>
+<p>　　机长必须按照规定的飞行间隔飞行，需要改变时，应当经飞行管制部门许可。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十条　 航路、航线飞行或者转场飞行的垂直间隔，按照飞行高度层配备。飞行高度层按照以下标准划分：</p>
+<p>　　（一）真航线角在0度至179度范围内，高度由900米至8100米，每隔600米为一个高度层；高度在9000米以上，每隔1200米为一个高度层。</p>
+<p>　　（二）真航线角在180度至359度范围内，高度由600米至8400米，每隔600米为一个高度层；高度在8400米以上，每隔1200米为一个高度层。</p>
+<p>　　（三）飞行高度层应当根据标准大气压条件下假定海平面计算。真航线角应当从航线起点和转弯点量取。</p>
+<p>　　飞行高度层的具体配备标准见本规则附件二。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十一条　 航路、航线飞行或者转场飞行的水平间隔，由中国人民解放军空军会同国务院民用航空主管部门拟定，报国务院、中央军事委员会空中交通管制委员会批准。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十二条　 飞行的安全高度是避免航空器与地面障碍物相撞的最低飞行高度。</p>
+<p>　　航路、航线飞行或者转场飞行的安全高度，在高原和山区应当高出航路中心线、航线两侧各25公里以内最高标高600米；在其他地区应当高出航路中心线、航线两侧各25公里以内最高标高400米。</p>
+<p>　　受性能限制的航空器，其航路、航线飞行或者转场飞行的安全高度，由有关航空管理部门另行规定。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十三条　 航路、航线飞行或者转场飞行的航空器，在航路中心线、航线两侧各25公里以内的最高标高不超过100米，大气压力不低于1000百帕（750毫米水银柱）的，允许在600米的高度层内飞行；当最高标高超过100米，大气压力低于1000百帕（750毫米水银柱）的，飞行最低的高度层必须相应提高，保证飞行的真实高度不低于安全高度。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十四条　 航路、航线飞行或者转场飞行的高度层，由批准本次飞行的负责人，通过飞行管制部门具体配备。</p>
+<p>　　飞行高度层应当根据飞行任务的性质、航空器性能、飞行区域以及航线的地形、天气和飞行情况等配备。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十五条　 在同一条航路、航线有数架（数批）航空器同时飞行并且互有影响的，应当分别将每架（每批）航空器配备在不同的高度层内；不能配备在不同高度层的，可以允许数架（数批）航空器在同一条航路、航线、同一个高度层内飞行，但是各架（各批）航空器之间应当保持规定的纵向间隔。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十六条　 航路、航线飞行或者转场飞行的航空器起飞前，应当将场面气压的数值调整到航空器上气压高度表的固定指标，使气压高度表的指针指到零的位置。</p>
+<p>　　航路、航线飞行或者转场飞行的航空器起飞后，在未规定过渡高度或者过渡高的机场上升到距该机场道面600米高度时，应当将航空器上气压高度表的标准海平面气压值调整到固定指标，然后再继续上升到规定的飞行高度层；规定有过渡高度或者过渡高的机场，在上升至过渡高度或者过渡高时，应当将气压高度表调整到标准海平面气压值。</p>
+<p>　　航路、航线飞行或者转场飞行的航空器，进入降落机场区域并下降至该机场过渡高度层时，或者根据空中交通管制员、飞行指挥员的指示，将机场场面气压的数值调整到航空器上气压高度表的固定指标。</p>
+<p>　　仅供民用航空器起降的机场，可以修正海平面气压值为航空器气压高度表拨正值。</p>
+<p>　　提供外国航空器起降的机场，可以向外国航空器提供机场修正海平面气压值。</p>
+<p>　　军用、民用航空器在同一机场同时飞行的，必须统一航空器上气压高度表拨正时机。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十七条　 在高原机场起飞前，航空器上气压高度表的气压刻度不能调整到机场场面气压数值的，应当将气压高度表的标准海平面气压值调整到固定指标（此时所指示的高度为假定零点高度），然后起飞和上升到规定的飞行高度。</p>
+<p>　　在高原机场降落时，航空器上气压高度表的气压刻度不能调整到机场场面气压数值的，应当按照空中交通管制员或者飞行指挥员通知的假定零点高度进行着陆。航空器上有两个气压高度表的，应当将其中一个气压高度表的标准海平面气压值调整到固定指标，而将另一个气压高度表以修正的海平面气压值调整到固定指标。</p>
+<p>　　在高原、山区飞行，必须注意航空器上气压高度表与无线电高度表配合使用。</p>
+<p style="margin: 0px">　　第八十八条　 航路、航线飞行或者转场飞行时，因航空器故障、积冰、绕飞雷雨区等原因需要改变飞行高度层的，机长应当向飞行管制部门报告原因和当时航空器的准确位置，请求另行配备飞行高度层。飞行管制部门允许航空器改变飞行高度层时，必须明确改变的高度层以及改变高度层的地段和时间。</p>
+<p>　　遇有紧急情况，飞行安全受到威胁时，机长可以决定改变原配备的飞行高度层，但必须立即报告飞行管制部门，并对该决定负责。改变高度层的方法是：从航空器飞行的方向向右转30度，并以此航向飞行20公里，再左转平行原航线上升或者下降到新的高度层，然后转回原航线。</p>
+<p style="margin: 0px">　<strong>　第七章　 飞行指挥</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第八十九条　 组织实施飞行指挥应当根据本规则和有关规定进行，做到正确、及时和不间断。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十条　 飞行指挥员必须切实履行职责，维护机场、空中秩序和飞行纪律，并做到：</p>
+<p>　　（一）了解飞行任务、飞行计划、飞行人员的技术水平及健康状况、航空器性能和机载设备，以及各项保障工作情况；</p>
+<p>　　（二）掌握飞行动态，了解天气变化，及时向飞行人员通知有关的空中情况和指挥其准确地按照计划飞行；</p>
+<p>　　（三）当空中情况发生变化时，及时采取措施，正确处置。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十一条　 飞行指挥必须按照下列调配原则安排飞行次序：</p>
+<p>　　（一）一切飞行让战斗飞行；</p>
+<p>　　（二）其他飞行让专机飞行和重要任务飞行；</p>
+<p>　　（三）国内一般任务飞行让班期飞行；</p>
+<p>　　（四）训练飞行让任务飞行；</p>
+<p>　　（五）场内飞行让场外飞行；</p>
+<p>　　（六）场内、场外飞行让转场飞行。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十二条　 在飞行期间，所有参加飞行和保障飞行的人员，必须服从飞行指挥员的指挥。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十三条　 驻在同一机场的军用航空器和民用航空器同时飞行时，必须实施统一指挥。军用航空单位派出飞行指挥员，民用航空单位派出飞行副指挥员。</p>
+<p>　　飞行副指挥员负责向飞行指挥员报告民用航空器的航行诸元和有关飞行情况，并且按照飞行指挥员的指示，对民用航空器实施指挥。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十四条　 执行不同任务的航空器或者不同型别的航空器，在同一机场同时飞行的，应当根据具体情况安排优先起飞和降落的顺序。</p>
+<p>　　对执行紧急或者重要任务的航空器，班期飞行或者转场飞行的航空器，速度大的航空器，应当允许优先起飞；对有故障的航空器，剩余油量少的航空器，执行紧急或者重要任务的航空器，班期飞行和航路、航线飞行或者转场飞行的航空器，应当允许优先降落。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十五条　 飞行指挥用无线电实施。指挥用语应当简短、明确、易懂、规范。</p>
+<p>　　未配备无线电通信设备的航空器，无线电受干扰或者无线电通信设备发生故障的航空器，按照本规则附件一的规定实施指挥。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十六条　 现用机场应当设飞行管制室、起飞线塔台（指挥塔台）或者机场管制塔台，其位置应当有良好的视界，可观察到机场、净空地带以及航空器飞行和航空器在机场上的活动。</p>
+<p>　　机场飞行管制室、起飞线塔台（指挥塔台）或者机场管制塔台，应当配备指挥和保障飞行的通信设备、雷达显示设备或者雷达标图以及其他有关设备和必要的文件图表等。</p>
+<p style="margin: 0px">　　第九十七条　 作战飞行的指挥，按照中国人民解放军有关规定执行。</p>
+<p style="margin: 0px">　　<strong>第八章　 飞行中特殊情况的处置</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十八条　 飞行中的特殊情况，是指突然发生的危及飞行安全的情况。</p>
+<p>　　对飞行中特殊情况的处置，应当根据情况的性质、飞行条件和可供进行处置的时间来确定。飞行中各种特殊情况的处置办法，由各航空管理部门规定。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第九十九条　 飞行人员、空中交通管制员、飞行指挥员和各类保障飞行的人员，对飞行中特殊情况的处置必须预有准备。飞行人员应当及时察觉飞行中出现特殊情况的各种征兆，熟练掌握在各种特殊情况下的操作程序和紧急处置方法；空中交通管制员或者飞行指挥员，应当熟知在不同的飞行条件下特殊情况的指挥措施和组织援救遇险航空器的方法；各类保障飞行的人员在任何情况下都应当恪尽职守，使各种保障设施经常处于良好状态，随时能为飞行人员、空中交通管制员、飞行指挥员正确处置特殊情况提供有利条件。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百条　 飞行中发生特殊情况，机长必须在保证航空器上人员生命安全的前提下，积极采取措施保全航空器。</p>
+<p>　　时间允许的，机长应当及时向空中交通管制员或者飞行指挥员报告所发生的情况和准备采取的措施，并且按照其指示行动。</p>
+<p>　　空中交通管制员或者飞行指挥员应当根据空中具体情况，及时采取正确措施指挥航空器。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零一条　 在飞行中遇到严重危及航空器和人员安全的情况时，飞行人员应当利用一切手段，重复发出规定的遇险信号。其他航空器飞行人员在飞行中收到遇险信号，应当暂时停止使用无线电发信，必要时协助遇险航空器重复发出遇险信号。</p>
+<p>　　空中交通管制员或者飞行指挥员在收到航空器发出的遇险信号后，应当迅速查明遇险航空器的位置和险情性质，立即采取措施，并报告上级。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零二条　 军用航空器遇险时，有关部门应当及时报告当地政府和驻军。当地政府和驻军应当立即组织搜寻援救。在海上搜寻援救遇险航空器时，还应当报告国家海上搜寻援救组织和附近的海上搜寻援救组织，国家海上搜寻援救组织和附近的海上搜寻援救组织应当迅速进行搜寻和援救。</p>
+<p>　　民用航空器遇险时，搜寻援救活动的组织与实施按照国家有关规定执行。</p>
+<p style="margin: 0px">　　第一百零三条　 航空器在中华人民共和国境外遇险时，应当使用国际通用的遇险信号和频率。在海上飞行遇险时，设备允许的，还应当使用500千赫频率发出遇险信号。</p>
+<p style="margin: 0px">　　<strong>第九章　 通信、导航、雷达、气象和航行情报保障</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零四条　 通信、导航、雷达、气象和航行情报保障部门应当明确任务，认真履行职责，密切协同，周密组织与实施飞行保障工作。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零五条　 各种通信、导航设备必须经常处于良好状态，主要设备应当配有备份，保证通信、导航的可靠性和稳定性。有关部门应当加强对航空通信、导航无线电频率的管理和保护。任何单位或者个人使用的无线电台和其他仪器、装置，不得妨碍航空无线电专用频率的正常使用。</p>
+<p>　　航路、航线地空通信、导航设备的增设、撤除或者变更，应当经中国人民解放军空军或者国务院民用航空主管部门同意。其中中波导航台和军用、民用航空共用的地空通信、导航设备的撤除还须经使用各方协商同意。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零六条　 飞行实施过程中，飞行人员、空中交通管制员、飞行指挥员应当按照通信、导航保障规定，正确使用通信、导航设备。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零七条　 雷达保障部门应当对中华人民共和国境内的所有飞行提供保障。</p>
+<p>　　雷达设备应当经常处于良好状态，保证雷达工作的可靠性和稳定性。</p>
+<p>　　雷达保障工作，应当按照管制区域或者雷达责任区组织实施。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零八条　 雷达保障应当做到：</p>
+<p>　　（一）及时、准确、连续地测定和通报空中航空器的位置；</p>
+<p>　　（二）严密监视航空器按照预定的航路、航线、飞行空域和高度飞行，及时发现和报知航空器偏离航路、航线、改变飞行高度和超出飞行空域的情况；</p>
+<p>　　（三）当获知空中有迷航、遇险的航空器时，应当组织有关雷达重点观察，迅速判明迷航、遇险的航空器及有关情况；</p>
+<p>　　（四）当飞行区域天气不稳定时，应当根据空中交通管制员或者飞行指挥员的要求，及时组织雷达探测天气。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百零九条　 飞行的气象保障工作由航空气象保障部门负责。</p>
+<p>　　航空气象保障部门必须严密组织气象保障，及时、准确地提供天气预报、天气实况，及时发布重要气象情报、危险天气警报和通报；必要时可以提出派遣航空器侦察天气和利用探测设备探测天气的建议。</p>
+<p>　　有关单位应当优先传递重要气象情报、危险天气警报和通报。</p>
+<p>　　机场的气象台，应当根据空中交通管制员或者飞行指挥员下达的任务，对在本机场起飞、降落的航空器，实施气象保障；兼负飞行管制分区（区域）飞行管制任务部门的机场气象台，还应当负责本区内转场飞行的气象保障。</p>
+<p>　　国家和各省、自治区、直辖市气象部门应当根据航空单位的申请，提供必要的气象情报。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十条　 飞行气象保障的组织与实施，应当按照各航空单位的有关规定执行。</p>
+<p>　　飞行保障任务涉及两个以上无隶属关系的气象部门时，应当按照有关协同规定组织实施。</p>
+<p style="margin: 0px">　　第一百一十一条　 航行情报部门，应当提供保证飞行安全、正常和效率所需要的各种航行情报资料。</p>
+<p>　　有关单位应当主动配合，密切协作，及时提供航行情报，保证航行资料及时、准确和完整。</p>
+<p style="margin: 0px">　　<strong>第十章　 对外国航空器的特别规定</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十二条　 外国航空器飞入或者飞出中华人民共和国领空，或者在中华人民共和国境内飞行、停留，必须按照中华人民共和国的有关规定获得批准。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十三条　 外国航空器在中华人民共和国境内的航路、航线飞行时，由中华人民共和国国务院民用航空主管部门负责提供空中交通管制服务。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十四条　 外国航空器飞入或者飞出中华人民共和国领空，必须按照规定的航路飞入或者飞出。飞入或者飞出领空前20至15分钟，其机组必须向中华人民共和国有关空中交通管制部门报告，并取得飞入或者飞出领空的许可；未经许可，不得飞入或者飞出。</p>
+<p style="margin: 0px">　　第一百一十五条　 未经批准擅自飞入或者飞出中华人民共和国领空的外国民用航空器，中华人民共和国有关机关有权采取必要措施，令其在指定的机场降落。</p>
+<p>　　在中华人民共和国境内飞行、停留的外国民用航空器违反本规则规定的，由中华人民共和国有关空中交通管制部门采取措施，令其纠正。情节严重的，有关部门可以采取必要措施，直至迫使其在指定机场降落。</p>
+<p style="margin: 0px">　　<strong>第十一章　 法律责任</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十六条　 违反本规则规定，《中华人民共和国民用航空法》及有关法规对其处罚有明确规定的，从其规定；无明确规定的，适用本章规定。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十七条　 未按本规则规定履行审批、备案或者其他手续的，由有关部门按照职责分工责令改正；情节严重的，对直接负责的主管人员和其他直接责任人员依法给予行政处分或者纪律处分；构成犯罪的，依法追究刑事责任。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十八条　 飞行人员未按本规则规定履行职责的，由有关部门依法给予行政处分或者纪律处分；情节严重的，依法给予吊扣执照一个月至六个月的处罚，或者责令停飞一个月至三个月；构成犯罪的，依法追究刑事责任。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百一十九条　 空中交通管制员、飞行指挥员未按本规则规定履行职责的，由有关部门视情节给予批评教育、警告、记过、降职或者取消资格，免除职务的处分；构成犯罪的，依法追究刑事责任。</p>
+<p style="margin: 0px">　　第一百二十条　 飞行保障部门及其人员未按本规则规定履行职责的，由有关航空管理部门视情节给予通报批评；对直接负责的主管人员或者其他责任人员依法给予行政处分或者纪律处分；构成犯罪的，依法追究刑事责任。</p>
+<p style="margin: 0px">　　<strong>第十二章　 附则</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百二十一条　 中华人民共和国航空器在本国领海以外毗连区、专属经济区和公海上空飞行，中华人民共和国缔结或者参加的国际条约同本规则有不同规定的，适用国际条约的规定；但是，中华人民共和国声明保留的条款除外。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百二十二条　 拦截违反本规则的航空器所使用的信号和被拦截的航空器回答的信号，按照本规则附件三的规定执行。</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　第一百二十三条　 本规则下列用语的含义：航空单位，是指拥有航空器并从事航空飞行活动的机关或者单位，包括航空运输公司、飞行俱乐部、飞行部队、飞行院校等。</p>
+<p>　　航空管理部门，是指对从事飞行活动的航空单位具有管理职能的机关或者单位，包括中国民用航空总局、国家体育总局、航空工业集团公司，中国人民解放军海军、空军、总参谋部陆航局等。</p>
+<p>　　过渡高度，是指一个特定的修正海平面气压高度。在此高度及其以下，航空器的垂直位置按修正海平面气压高度表示。</p>
+<p>　　过渡高，是指一个特定的场面气压高。在此高及其以下，航空器的垂直位置按场面气压高表示。过渡高度层，是指在过渡高度之上的最低可用飞行高度层。</p>
+<p>　　终端管制区，是指设在一个或者几个主要机场附近的空中交通服务航路汇合处的管制区。</p>
+<p style="margin: 0px">　　第一百二十四条　 本规则自2001年8月1日零时起施行。国务院、中央军事委员会1977年4月21日颁发的《中华人民共和国飞行基本规则》同时废止。</p>
+<p align="center" style="margin: 0px">辅助指挥、<span style="font-size: 42pt">&nbsp;</span>联络的符号和信号（一）　　</p>
+<table class="MsoNormalTable" style="border-bottom: black 1px solid; border-left: black 1px solid; border-collapse: collapse; border-top: black 1px solid; border-right: black 1px solid; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">顺序</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含<span>&nbsp; </span>义</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼<span>&nbsp; </span>间</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜<span>&nbsp; </span>间</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 1">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">１</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">请求起飞</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">飞行员向上举手</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">闪烁航行灯</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 2">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">２</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">允许起飞</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt"><span style="font-family: 宋体; color: black; font-size: 10.5pt">用白色信号旗向上指，然后指向起飞方向</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">打开绿色信号灯</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 3">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">３</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">禁止起飞</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">（或者滑行）</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt"><span style="font-family: 宋体; color: black; font-size: 10.5pt">用红色信号旗向上指或者向航空器前方发射红色信号弹</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">打开红色信号灯或者向航空器前方发射红色信号弹</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 4">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">４</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">请求着陆</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt"><span style="font-family: 宋体; color: black; font-size: 10.5pt">航空器通过跑道上空并且摇摆航空器</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">航空器通过跑道上空并且闪烁航行灯或者打开着陆灯</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 5">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">５</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">允许着陆</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">着陆地带铺设“Ｔ”字布或者发射绿色信号弹</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">打开“Ｔ”字灯或者发射绿色信号弹</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 6">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">６</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">禁止着陆</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">将“Ｔ”字布摆成“＋”字形或者发射红色信号弹</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">将“Ｔ”字灯改成“＋”字形或者发射红色信号弹</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 7">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">7</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">命令全部飞</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">机立即降落在“Ｔ”字布前五米处与横布平行放一横布</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">连续发射绿色信号弹</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 8">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">８</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">请求立即</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">强迫着陆</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">航空器通过跑道上空并且发出一颗或者数颗信号弹</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">航空器通过跑道上空并且发出一颗或者数颗信号弹</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 9; mso-yfti-lastrow: yes">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">９</span></p>
+            </td>
+            <td width="120" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 90pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">命令在备降</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">机场降落</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">在“Ｔ”字布位置摆一箭头式布，箭头指向备降机场</span></p>
+            </td>
+            <td width="207" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 155.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">在“Ｔ”字灯位置摆一箭头式灯光，箭头指向备降机场</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>　　　　&nbsp;　　</p>
+<table width="0" class="MsoNormalTable" style="border-bottom: black 1px solid; border-left: black 1px solid; width: 0cm; border-collapse: collapse; border-top: black 1px solid; border-right: black 1px solid; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">顺序</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 108pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含<span>&nbsp; </span>义</span></p>
+            </td>
+            <td width="168" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼<span>&nbsp; </span>间</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜<span>&nbsp; </span>间</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 1">
+            <td width="31" valign="top" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">10</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 108pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">命令在迫降</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">地带着陆</span></p>
+            </td>
+            <td width="168" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">将“Ｔ”字布摆在迫降地带</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">关闭“Ｔ”字灯，用探照灯照射迫降地带</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 2">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">11</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 108pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">在机场上空做右起落航线飞行</span></p>
+            </td>
+            <td width="168" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">在“Ｔ”字布前五米处用布摆一个三角形</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">在“Ｔ”字灯前五米处用灯光摆一个三角形</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 3">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">12</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 108pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">起落架未放下</span></p>
+            </td>
+            <td width="168" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">将“Ｔ”字布分开五米或者发射红色信号弹</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">将“Ｔ”字灯分开五米或者发射红色信号弹</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 4">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">13</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 108pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">右起落架故障</span></p>
+            </td>
+            <td width="168" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">将“T</span><span style="font-family: 'Courier New'; color: black; font-size: 10.5pt">”</span><span style="font-family: 宋体; color: black; font-size: 10.5pt">字布横布右</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">端折起</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt"><span>&nbsp; </span></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 5">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">14</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 108pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">左起落架故障</span></p>
+            </td>
+            <td width="168" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">将“Ｔ”字布横布左</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">端折起</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　&nbsp;</p>
+            </td>
+        </tr>
+        <tr style="height: 1cm; mso-yfti-irow: 6">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; height: 1cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">15</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 108pt; padding-right: 5.4pt; height: 1cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">前起落架故障</span></p>
+            </td>
+            <td width="168" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; height: 1cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">在“Ｔ”字布前，纵布延长线上十米处，平行跑道铺设一纵布</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 1cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　&nbsp;</p>
+            </td>
+        </tr>
+        <tr style="height: 17pt; mso-yfti-irow: 7; mso-yfti-lastrow: yes">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; height: 17pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">备注</span></p>
+            </td>
+            <td width="528" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 396pt; padding-right: 5.4pt; height: 17pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" colspan="3">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">“Ｔ”字布的尺寸：纵布的长度为十二米，宽度为二米；横布及辅助布的长度为九米，宽度为二米；</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">“T</span><span style="font-family: 'Courier New'; color: black; font-size: 10.5pt">”</span><span style="font-family: 宋体; color: black; font-size: 10.5pt">字布的颜色：地面有雪用红色或者黑色，没有雪用白色</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>　　　　&nbsp;</p>
+<p align="center" style="margin-top: 0px; layout-grid-mode: char; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt"><span><font face="Times New Roman">&nbsp;辅助指挥、联络的符号和信号（二）</font></span></span></p>
+<p align="center" style="margin-top: 0px; margin-bottom: 0px">　　</p>
+<table class="MsoNormalTable" style="border-bottom: black 1px solid; border-left: black 1px solid; border-collapse: collapse; border-top: black 1px solid; border-right: black 1px solid; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="height: 6.75pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td width="55" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 41.4pt; padding-right: 5.4pt; height: 6.75pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">序号</span></p>
+            </td>
+            <td width="232" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 174pt; padding-right: 5.4pt; height: 6.75pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">信号类别</span></p>
+            </td>
+            <td width="287" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 215.4pt; padding-right: 5.4pt; height: 6.75pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" colspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">信号含义</span></p>
+            </td>
+        </tr>
+        <tr style="height: 6.75pt; mso-yfti-irow: 1">
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; height: 6.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">飞行中的航空器</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; height: 6.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">地面上的航空器</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 2">
+            <td width="55" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 41.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">１</span></p>
+            </td>
+            <td width="232" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 174pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">绿色灯光指向航空器</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">可以着陆</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">可以起飞</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 3">
+            <td width="55" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 41.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">２</span></p>
+            </td>
+            <td width="232" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 174pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">红色灯光指向航空器</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">避让其他航空器</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">并继续盘旋</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">停止</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 4">
+            <td width="55" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 41.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">３</span></p>
+            </td>
+            <td width="232" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 174pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">一连串绿色闪</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">光指向航空器</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">返回着陆</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">可以滑行</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 5">
+            <td width="55" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 41.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">４</span></p>
+            </td>
+            <td width="232" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 174pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">一连串红色闪</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">光指向航空器</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">机场不安全，</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">不要着陆</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">滑离机场起点</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 6">
+            <td width="55" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 41.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">５</span></p>
+            </td>
+            <td width="232" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 174pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">一连串白色闪</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">光指向航空器</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">在此机场着陆并</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">滑行到停机坪</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">滑回机场起点</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 7; mso-yfti-lastrow: yes">
+            <td width="55" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 41.4pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">６</span></p>
+            </td>
+            <td width="232" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 174pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">红色信号弹</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">暂不要着陆</span></p>
+            </td>
+            <td width="144" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.7pt; padding-right: 5.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　&nbsp;</p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　&nbsp;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>　　　　&nbsp;</p>
+<p align="center" style="margin-top: 0px; layout-grid-mode: char; margin-bottom: 0px">　　<span style="font-family: 黑体; color: black; font-size: 10.5pt"><font face="Times New Roman">拦截航空器和被拦截航空器的动作信号</font></span></p>
+<p align="center" style="margin-top: 0px; margin-bottom: 0px">　　</p>
+<table class="MsoNormalTable" style="border-bottom: black 1px solid; border-left: black 1px solid; border-collapse: collapse; border-top: black 1px solid; border-right: black 1px solid; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td width="31" valign="top" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">类别</span></p>
+            </td>
+            <td width="28" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">组号</span></p>
+            </td>
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 35.9pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">处置</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">拦截航空器信号</span></p>
+            </td>
+            <td width="80" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 59.8pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含义</span></p>
+            </td>
+            <td width="143" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.1pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">被拦截航空器信号</span></p>
+            </td>
+            <td width="28" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含义</span></p>
+            </td>
+        </tr>
+        <tr style="height: 2cm; mso-yfti-irow: 1">
+            <td width="31" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 23.4pt; padding-right: 5.4pt; height: 2cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="7">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">拦截航空器先用的信号和被拦截航空器回答的信号</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　&nbsp;</p>
+            </td>
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 2cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="3">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">第一组</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　&nbsp;</p>
+            </td>
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 35.9pt; padding-right: 5.4pt; height: 2cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin: 0px 5.65pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">信号告警</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 2cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间：通常在目标机前侧方，摇摆机翼，由内向外做水平移动，并可发射机尾陆空协同信号弹。</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜间：同样动作，并不规则地闪烁航行灯。</span></p>
+            </td>
+            <td width="80" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 59.8pt; padding-right: 5.4pt; height: 2cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">你已越境（偏航）立即退出（恢复正常航线）</span></p>
+            </td>
+            <td width="143" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.1pt; padding-right: 5.4pt; height: 2cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="3">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　&nbsp;</p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间：摇摆机翼，并立即改变航向。</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　&nbsp;</p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜间：同样动作，并不规则地闪烁航行灯。</span></p>
+            <p style="margin-top: 0px; text-indent: 21pt; margin-bottom: 0px">　　&nbsp;</p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">直升机：</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：摇摆航空器不规则地闪烁航行灯并改向飞行。</span></p>
+            </td>
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 2cm; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="3">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明白</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　&nbsp;</p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt"><span>&nbsp; </span></span><span style="font-family: 宋体; color: black; font-size: 10.5pt">照办</span></p>
+            </td>
+        </tr>
+        <tr style="height: 52.75pt; mso-yfti-irow: 2">
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 35.9pt; padding-right: 5.4pt; height: 52.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">动作警告</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 52.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间：通常在我方一侧向其做小速度差的连续攻击动作。</span></p>
+            </td>
+            <td width="80" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 59.8pt; padding-right: 5.4pt; height: 52.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">越境飞机立即退出</span></p>
+            </td>
+        </tr>
+        <tr style="height: 52.75pt; mso-yfti-irow: 3">
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 35.9pt; padding-right: 5.4pt; height: 52.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">警告性射击</span></p>
+            </td>
+            <td width="216" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 52.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：在被拦截目标的侧方，平行略靠前，用单炮向前方射击。</span></p>
+            </td>
+            <td width="80" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 59.8pt; padding-right: 5.4pt; height: 52.75pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">立即改</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">变航向</span></p>
+            </td>
+        </tr>
+        <tr style="height: 22.05pt; mso-yfti-irow: 4">
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 22.05pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="4">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">第二组</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　&nbsp;</p>
+            </td>
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 35.9pt; padding-right: 5.4pt; height: 22.05pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin: 0px 5.65pt">　　<span style="font-family: 宋体; letter-spacing: 6pt; color: black; font-size: 10.5pt">外逼</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 22.05pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：在我方一侧，向目标机反复压坡度。</span></p>
+            </td>
+            <td width="80" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 59.8pt; padding-right: 5.4pt; height: 22.05pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">向外飞行</span></p>
+            </td>
+            <td width="143" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.1pt; padding-right: 5.4pt; height: 22.05pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">摇摆机翼，立即改变航向。</span></p>
+            </td>
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 22.05pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明白</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt"><span>&nbsp; </span></span><span style="font-family: 宋体; color: black; font-size: 10.5pt">照办</span></p>
+            </td>
+        </tr>
+        <tr style="height: 39.35pt; mso-yfti-irow: 5">
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 39.35pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间：向目标做连续的攻击动作或采用大角度进入拦截的方法，进行冲击。</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜间：向目标做连续的攻击动作。</span></p>
+            </td>
+        </tr>
+        <tr style="height: 39.4pt; mso-yfti-irow: 6">
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 35.9pt; padding-right: 5.4pt; height: 39.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin: 0px 5.65pt">　　<span style="font-family: 宋体; letter-spacing: 2pt; color: black; font-size: 10.5pt">引导出境</span></p>
+            </td>
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 39.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">１．昼间或夜间：摇摆机翼（夜间可不规则闪烁航行灯），用目标跟得上的速度向境外飞行。</span></p>
+            </td>
+            <td width="80" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 59.8pt; padding-right: 5.4pt; height: 39.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">跟我来</span></p>
+            </td>
+            <td width="143" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 107.1pt; padding-right: 5.4pt; height: 39.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">摇摆机翼（不规则地闪烁航行灯），并跟随。</span></p>
+            </td>
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 39.4pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明 白</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　&nbsp;</p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">照办</span></p>
+            </td>
+        </tr>
+        <tr style="height: 39.35pt; mso-yfti-irow: 7; mso-yfti-lastrow: yes">
+            <td width="216" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 162pt; padding-right: 5.4pt; height: 39.35pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">２．接近边境做大于９０°的上升转弯急速脱离目标。不要穿越被拦截目标机的飞行路线。</span></p>
+            </td>
+            <td width="80" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 59.8pt; padding-right: 5.4pt; height: 39.35pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">你可以</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">前<span>&nbsp; </span>进</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>　　　　　　&nbsp;　　</p>
+<table class="MsoNormalTable" style="border-bottom: black 1px solid; border-left: black 1px solid; border-collapse: collapse; border-top: black 1px solid; border-right: black 1px solid; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td width="35" valign="top" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 26.6pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">类别</span></p>
+            </td>
+            <td width="36" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 27pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">组号</span></p>
+            </td>
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 36pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">处置</span></p>
+            </td>
+            <td width="209" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 156.55pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">拦截航空器信号</span></p>
+            </td>
+            <td width="82" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 61.55pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含义</span></p>
+            </td>
+            <td width="129" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 96.9pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">被拦截航空器信号</span></p>
+            </td>
+            <td width="35" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 26.2pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含义</span></p>
+            </td>
+        </tr>
+        <tr style="height: 20.25pt; mso-yfti-irow: 1">
+            <td width="35" valign="top" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 26.6pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　&nbsp;</p>
+            </td>
+            <td width="36" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 27pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">第三组</span></p>
+            </td>
+            <td width="48" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 36pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin: 0px 5.65pt">　　<span style="font-family: 宋体; letter-spacing: 5pt; color: black; font-size: 10.5pt">迫降</span></p>
+            </td>
+            <td width="209" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 156.55pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">１．昼间：在目标机左前方摇摆机翼，得到回答后，向左以目标跟得上的速度做水平慢转弯，飞向指定机场。</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜间：同样动作，并不规则地闪烁航行灯。</span></p>
+            </td>
+            <td width="82" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 61.55pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">你已被</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">拦截</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">跟我来</span></p>
+            </td>
+            <td width="129" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 96.9pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间：摇摆机翼并跟随。</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜间：同样动作，并不规则地闪烁航行灯。</span></p>
+            </td>
+            <td width="35" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 26.2pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明白</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt"><span>　&nbsp; </span></span><span style="font-family: 宋体; color: black; font-size: 10.5pt">照办</span></p>
+            </td>
+        </tr>
+        <tr style="height: 20.25pt; mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+            <td width="209" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 156.55pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">２．到达机场后，在机场上空盘旋，长机放起落架，并沿着陆航向飞越跑道上空（夜间同样动作，并打开着陆灯），引导目标着陆。</span></p>
+            </td>
+            <td width="82" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 61.55pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">可以在此机场</span></p>
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">着<span>&nbsp; </span>陆</span></p>
+            </td>
+            <td width="129" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 96.9pt; padding-right: 5.4pt; height: 20.25pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">放下起落架，夜间持续打开着陆灯。</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>　　　　&nbsp;　　&nbsp;　　</p>
+<table class="MsoNormalTable" style="border-bottom: black 1px solid; border-left: black 1px solid; border-collapse: collapse; border-top: black 1px solid; border-right: black 1px solid; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td width="35" valign="top" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 26.6pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">类别</span></p>
+            </td>
+            <td width="28" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">组号</span></p>
+            </td>
+            <td width="248" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 185.7pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">拦截航空器信号</span></p>
+            </td>
+            <td width="84" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 63pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含<span>&nbsp; </span>义</span></p>
+            </td>
+            <td width="168" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">被拦截航空器信号</span></p>
+            </td>
+            <td width="33" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 25.1pt; padding-right: 5.4pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">含义</span></p>
+            </td>
+        </tr>
+        <tr style="height: 80.65pt; mso-yfti-irow: 1">
+            <td width="35" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; padding-left: 5.4pt; width: 26.6pt; padding-right: 5.4pt; height: 80.65pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="4">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">被拦截航空器先用的信号和拦截航空器回答的信号</span></p>
+            </td>
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 80.65pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">第四组</span></p>
+            </td>
+            <td width="248" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 185.7pt; padding-right: 5.4pt; height: 80.65pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间：高出场面３００米以上但不高于６００米飞越着陆跑道，收上起落架，在机场上空盘旋。</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　&nbsp;</p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">夜间：高出场面３００米以上但不高于６００米，飞越着陆跑道，闪烁着陆灯，在机场上空盘旋。如不能闪烁着陆灯，闪烁可利用的其他灯光。</span></p>
+            </td>
+            <td width="84" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 63pt; padding-right: 5.4pt; height: 80.65pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">你所指定的机场不合适</span></p>
+            </td>
+            <td width="168" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; height: 80.65pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">拦截机收上起落架并使用第三组第１项信号。在地面引导下，将目标引领到其他机场。</span></p>
+            </td>
+            <td width="33" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 25.1pt; padding-right: 5.4pt; height: 80.65pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明白<span>&nbsp; </span>跟我来</span></p>
+            </td>
+        </tr>
+        <tr style="height: 72pt; mso-yfti-irow: 2">
+            <td width="168" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; height: 72pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">如决定释放被拦截机使用第二组引导出境第２项信号。</span></p>
+            </td>
+            <td width="33" valign="top" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 25.1pt; padding-right: 5.4pt; height: 72pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明白</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt"><span>&nbsp; </span></span><span style="font-family: 宋体; color: black; font-size: 10.5pt">你可以前进</span></p>
+            </td>
+        </tr>
+        <tr style="height: 54.8pt; mso-yfti-irow: 3">
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 54.8pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">第五组</span></p>
+            </td>
+            <td width="248" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 185.7pt; padding-right: 5.4pt; height: 54.8pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：规则地开关一切可供</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">使用的灯光，但其方式要与闪烁灯</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">光有所区别。</span></p>
+            </td>
+            <td width="84" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 63pt; padding-right: 5.4pt; height: 54.8pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">不能照办</span></p>
+            </td>
+            <td width="168" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 126pt; padding-right: 5.4pt; height: 54.8pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" rowspan="2">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：摇摆机翼，闪烁航行灯，跟踪监视其行动</span></p>
+            </td>
+            <td width="33" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 25.1pt; padding-right: 5.4pt; height: 54.8pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明白</span></p>
+            </td>
+        </tr>
+        <tr style="height: 71.3pt; mso-yfti-irow: 4; mso-yfti-lastrow: yes">
+            <td width="28" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 21.3pt; padding-right: 5.4pt; height: 71.3pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">第六组</span></p>
+            </td>
+            <td width="248" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 185.7pt; padding-right: 5.4pt; height: 71.3pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">昼间或夜间：不规则地闪烁一切可</span></p>
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">供使用的灯光。</span></p>
+            </td>
+            <td width="84" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 63pt; padding-right: 5.4pt; height: 71.3pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p align="center" style="text-align: center; margin-top: 0px; margin-bottom: 0px"><span style="font-family: 宋体; color: black; font-size: 10.5pt">在遇险中</span></p>
+            </td>
+            <td width="33" style="border-bottom: windowtext 1pt solid; border-left: medium none; padding-bottom: 0cm; padding-left: 5.4pt; width: 25.1pt; padding-right: 5.4pt; height: 71.3pt; border-top: medium none; border-right: windowtext 1pt solid; padding-top: 0cm; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt">
+            <p style="text-justify: inter-ideograph; text-align: justify; margin: 0px 0cm; font-family: 'Times New Roman'; font-size: 10.5pt">　　<span style="font-family: 宋体; color: black; font-size: 10.5pt">明白</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>　　　　　　</p>
+<p align="center"><strong>国务院、中央军委关于修改《中华人民共和国飞行基本规则》的决定</strong></p>
+<p align="center" style="margin-top: 0px; margin-bottom: 0px">（２００１年７月２７日国务院、中央军事委员会令第３１２号公布）</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　国务院、中央军委决定对2000年7月24日公布的《中华人民共和国飞行基本规则》作如下修改：</p>
+<p style="margin-top: 0px; margin-bottom: 0px">　　一、第十四条第三款修改为：“等待空域通常划设在导航台上空；飞行活动频繁的机场，可以在机场附近上空划设。等待空域的最低高度层，距离地面最高障碍物的真实高度不得小于600米。8400米以下，每隔300米为一个等待高度层；8400米以上，每融600米为一个等待高度层。”</p>
+<p style="margin: 0px">　　二、第八十条第一款第一项修改为：“真航线角在0度至179度范围内，高度由900米至8100米，每隔600米为一个高度层；高度在9000米以上，每隔1200米为一个高度层。”第二项修改为：“真航线角在180度至359度范围内，高度由600米至8400米，每隔600米为一个高度层；高度在8400米以上，每隔1200米为一个高度层。”</p>
+<p style="margin: 0px">　　本决定自2001年8月1日零时起施行。</p>
+<p>　　《中华人民共和国飞行基本规则》根据本决定作相应修改，重新公布。</p>
+                  <div id="id_tblAppendix">
+                  <br />
+                     <p style="font-size:16px"><strong> 附件：</strong><br />
+                     <a href="./P020151030499219255126.pdf" target="_blank">中华人民共和国飞行基本规则.pdf</a> </p>
+                  </div>
+                  
+							  <script>
+									  var appendixfile="中华人民共和国飞行基本规则.pdf";
+									  var appendixlink="";
+									 
+									  if(appendixfile!="" || appendixlink!="" )
+									     id_tblAppendix.style.display = "inline";
+									  else  
+									     id_tblAppendix.style.display = "none";
+</script> 
+		</div>
+
+                <div class="n_list" >
+                    <ul id="ulRel">
+                        
+                    </ul>
+                </div>
+
+
+	  </div>
+	
+  </div>
+  <!--end main-->
+  <div class="bottom_panel"></div>
+</div>
+<!--bottom-->
+   <div class="bottom" >
+  <div class="wrap_w">
+    <div class="link clearfix"> 
+	  <ul>
+	    <li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="内设机构" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.caac.gov.cn/dev/bgt/" target="_blank" title="链接到“综合司”"><p data-role="option_item">综合司</p></a>
+			  <a href="http://www.caac.gov.cn/dev/hab/" target="_blank" title="链接到“航空安全办公室”"><p data-role="option_item">航空安全办公室</p></a>
+              <a href="http://www.caac.gov.cn/dev/zcfgs/" target="_blank" title="链接到“政策法规司”"><p data-role="option_item">政策法规司</p></a>
+              <a href="http://www.caac.gov.cn/dev/ghfzs/" target="_blank" title="链接到“发展计划司”"><p data-role="option_item">发展计划司</p></a>
+              <a href="http://www.caac.gov.cn/dev/cws/" target="_blank" title="链接到“财务司”"><p data-role="option_item">财务司</p></a>
+              <a href="http://www.caac.gov.cn/dev/rskjs/" target="_blank" title="链接到“人事科教司”"><p data-role="option_item">人事科教司</p></a>
+              <a href="http://www.caac.gov.cn/dev/gjhzs/" target="_blank" title="链接到“国际司”"><p data-role="option_item">国际司（港澳台办公室）</p></a>
+              <a href="http://www.caac.gov.cn/dev/yshs/" target="_blank" title="链接到“运输司”"><p data-role="option_item">运输司</p></a>
+              <a href="http://www.caac.gov.cn/dev/fbs/" target="_blank" title="链接到“飞行标准司”"><p data-role="option_item">飞行标准司</p></a>
+              <a href="http://www.caac.gov.cn/dev/shs/" target="_blank" title="链接到“航空器适航审定司”"><p data-role="option_item">航空器适航审定司</p></a>
+              <a href="http://www.caac.gov.cn/dev/jcs/" target="_blank" title="链接到“机场司”"><p data-role="option_item">机场司</p></a>
+              <a href="http://www.caac.gov.cn/dev/dkaqs/" target="_blank" title="链接到“低空安全司”"><p data-role="option_item">低空安全司</p></a>
+
+              <a href="http://www.caac.gov.cn/dev/kgbgs/" target="_blank" title="链接到“空管行业管理办公室”"><p data-role="option_item">空管行业管理办公室</p></a>
+              <a href="http://www.caac.gov.cn/dev/gaj/" target="_blank" title="链接到“公安局”"><p data-role="option_item">公安局</p></a>
+              <a href="http://www.caac.gov.cn/dev/dwbgs/" target="_blank" title="链接到“直属机关党委（思想政治工作办公室）”"><p data-role="option_item">直属机关党委（思想政治工作办公室）</p></a>
+              
+              <a href="http://www.caac.gov.cn/dev/qgmhgh/" target="_blank" title="链接到“全国民航工会”"><p data-role="option_item">全国民航工会</p></a>
+              <a href="http://www.caac.gov.cn/dev/ltxgbj/" target="_blank" title="链接到“离退休干部局”"><p data-role="option_item">离退休干部局</p></a>
+			</div> 
+		  </div>
+		</li>
+		<li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="地区管理局" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://hb.caac.gov.cn" title="链接到“华北地区管理局”" target="_blank"><p data-role="option_item">华北地区管理局</p></a>
+			  <a href="http://db.caac.gov.cn" title="链接到“东北地区管理局”" target="_blank"><p data-role="option_item">东北地区管理局</p></a>
+                          <a href="http://hd.caac.gov.cn" title="链接到“华东地区管理局”" target="_blank"><p data-role="option_item">华东地区管理局</p></a>
+                          <a href="http://zn.caac.gov.cn" title="链接到“中南地区管理局”" target="_blank"><p data-role="option_item">中南地区管理局</p></a>
+                          <a href="http://xn.caac.gov.cn" title="链接到“西南地区管理局”" target="_blank"><p data-role="option_item">西南地区管理局</p></a>
+                          <a href="http://xb.caac.gov.cn" title="链接到“西北地区管理局”" target="_blank"><p data-role="option_item">西北地区管理局</p></a>
+                          <a href="http://xj.caac.gov.cn" title="链接到“新疆管理局”" target="_blank"><p data-role="option_item">新疆管理局</p></a>
+			</div>
+		  </div>
+		</li>
+		<li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="直属机构" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.atmb.net.cn" title="链接到“空中交通管理局”" target="_blank"><p data-role="option_item">空中交通管理局</p></a>
+			  <a ><p data-role="option_item">机关服务局</p></a>
+              <a href="http://www.cauc.edu.cn" title="链接到“中国民航大学”" target="_blank"><p data-role="option_item">中国民航大学</p></a>
+              <a href="http://www.cafuc.edu.cn" title="链接到“中国民航飞行学院”" target="_blank"><p data-role="option_item">中国民航飞行学院</p></a>
+              <a href="http://www.camic.cn" title="链接到“中国民航管理干部学院”" target="_blank"><p data-role="option_item">中国民航管理干部学院</p></a>
+              <a href="https://www.gcac.edu.cn" title="链接到“广州民航职业技术学院”" target="_blank"><p data-role="option_item">广州民航职业技术学院</p></a>
+              <a href="https://www.shcac.edu.cn/" title="链接到“上海民航职业技术学院”" target="_blank"><p data-role="option_item">上海民航职业技术学院</p></a>
+              <a href="http://www.castc.org.cn" title="链接到“中国民航科学技术研究院”" target="_blank"><p data-role="option_item">中国民航科学技术研究院</p></a>
+              <a href="https://www.caacsri.com" title="连接到“民航第二研究所”" target="_blank"><p data-role="option_item">民航第二研究所</p></a>
+              <a href="http://www.caacnews.com.cn" title="链接到“中国民航报社出版社”" target="_blank"><p data-role="option_item">中国民航报社出版社（中国民用航空宣传教育中心）</p></a>
+              <!--a href="http://www.mhzyy.cn" title="链接到“民航医学中心(总医院)”" target="_blank"><p data-role="option_item">民航医学中心（总医院）</p></a-->
+              <a href="http://www.caacsc.cn" title="链接到“清算中心”" target="_blank"><p data-role="option_item">清算中心</p></a>
+              <!--a href="http://www.chinacfi.net" title="链接到“中国民航飞行校验中心”" target="_blank"><p data-role="option_item">中国民航飞行校验中心</p></a-->
+              <a href="http://www.caac.gov.cn/mhjxxzx/index.html" title="链接到“信息中心”" target="_blank"><p data-role="option_item">信息中心</p></a>
+              <a href="http://WWW.CAQS.CN" title="链接到“民航专业工程质量监督总站”" target="_blank"><p data-role="option_item">民航专业工程质量监督总站</p></a>
+              <!--a href="http://www.caqs.cn/" title="链接到“民航专业工程质量监督总站”" target="_blank"><p data-role="option_item">民航专业工程质量监督总站</p></a-->
+              <a href="http://www.cah.com.cn" title="链接到“首都机场集团”" target="_blank"><p data-role="option_item">首都机场集团</p></a>
+              <a href="http://sjzx.caac.gov.cn/" title="链接到“审计中心”" target="_blank"><p data-role="option_item">审计中心</p></a>
+              <a href="http://www.icscc.org.cn" title="链接到“国际合作中心”" target="_blank"><p data-role="option_item">国际合作中心</p></a>
+              <a ><p data-role="option_item">中国民航机场建设集团有限公司</p></a>
+              <!--<a title="链接到“中国民航工程咨询公司”" target="_blank"><p data-role="option_item">中国民航工程咨询公司</p></a>-->
+              <a href="http://acc.caac.gov.cn/" title="链接到“中国民用航空适航审定中心”" target="_blank"><p data-role="option_item">中国民用航空适航审定中心</p></a>
+              <a href="http://www.caacmuseum.cn/" title="链接到“民航博物馆”" target="_blank"><p data-role="option_item">民航博物馆</p></a>
+
+              <a href="http://www.mhzyy.cn" title="链接到“民航医学中心(总医院)”" target="_blank"><p data-role="option_item">民航医学中心(总医院)</p></a>
+
+			</div>
+		  </div>
+		</li>
+		<li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="驻外机构" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.caac.gov.cn/ICAO/" target="_blank" title="链接“中华人民共和国常驻国际民航组织理事会代表处”"><p data-role="option_item">中华人民共和国常驻国际民航组织理事会代表处</p></a>
+			</div>
+		  </div>
+		</li>
+		<li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="相关链接" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.gov.cn/" target="_blank" title="链接到“中央政府门户网站”"><p data-role="option_item">中央政府门户网站</p></a>
+			  <a href="http://www.mot.gov.cn" target="_blank" title="链接“交通运输部”"><p data-role="option_item">交通运输部</p></a>
+			  <a href="http://www.nra.gov.cn/" target="_blank" title="链接“国家铁路局”"><p data-role="option_item">国家铁路局</p></a>
+                          <a href="http://www.spb.gov.cn/" target="_blank" title="链接到“国家邮政局”"><p data-role="option_item">国家邮政局</p></a>
+                          <a href="http://www.caac.gov.cn/GYMH/MHGK/STZZ/" target="_blank"><p data-role="option_item">民航社团组织</p></a>
+                          <a href="http://www.caac.gov.cn/GYMH/MHGK/HKGS/" target="_blank"><p data-role="option_item">航空运输企业</p></a>
+                          <a href="http://www.caac.gov.cn/GYMH/MHGK/MYJC/" target="_blank"><p data-role="option_item">民用机场</p></a>
+                          <a href="http://www.caac.gov.cn/GYMH/MHGK/BZQY/" target="_blank"><p data-role="option_item">民航运输保障企业</p></a>
+			</div>
+		  </div>
+		</li>
+	  </ul>
+	</div>
+	<div class="foot_info">
+		<div style="width:740px;margin-left:230px;" >
+                 <div style="float:left; width:125px;margin-top:20px;margin-left:-175px;">
+          	   <img src="../../../images/feiji.jpg" />
+                 </div>
+		  <div style="width:680px; float:left;margin-left:-20px">			 
+			 <div class="foot_nav" style="margin-left:-5px; padding-bottom:18px;text-align: left;">
+				<ul style="float:left;width: 290px;">
+				  <li class="d_inline" style="padding:0 5px;font-size:13px;"><a href="" target="_blank">关于我们</a></li><li class="d_inline" style="padding:0 5px;font-size:13px;"><a href="" target="_blank">站点地图</a></li><!--li class="d_inline" style="padding:0 5px;"><a href="" target="_blank">联系我们</a></li><li class="d_inline" style="padding:0 5px;"><a href="" target="_blank">网站纠错</a></li-->
+				</ul>
+				<ul>
+				  <li class="d_inline" style="padding:0 5px;border-left: none;color: white;font-size:13px;">地址：北京市东城区东四西大街155号（100710）</li>
+				</ul>
+			  </div>
+			  <div class="copyright" style="font-size:13px;">
+				<p style="text-align:left; padding-bottom:18px;"><label style="width:290px;display: inline-block;">版权所有：中国民用航空局</label>网站管理：中国民用航空局综合司</p>
+				<p style="text-align:left; padding-bottom:18px;">
+					<label style="width:230px;display: inline-block;"><a href="https://beian.miit.gov.cn/" target="_blank" title="工业和信息化部政务服务平台" style =" color:#FFF;">ICP备案编号：京ICP备19046468号</a></label>
+					<label style="width: 230px;display: inline-block;"><img src="/images/caacgov-ga.png" width="16px" /><a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010102007643" rel="noreferrer" target="_blank" style=" color: #fff; margin-left: 3px;">京公网安备11010102007643号</a></label>
+					<label style="width: 200px;display: inline-block;">政府网站识别码：bm70000001</label></p>
+			  </div>		    		     
+		  </div>
+		  <div style="float:left;margin-left:-70px; margin-top:13px;">
+			    <span id="_ideConac"></span>
+	          </div>
+                   <div style="float:right; margin-top:25px;margin-right:-45px;" id="jiucuoDiv">
+                                
+                   </div>	 
+
+        </div>
+
+
+  </div>
+</div>
+<div align="left">
+<style>
+.foot_nav li a:hover{ color:#FFF;}
+</style>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4014848c4e18723269ffe0193734e573";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+(function(){
+var scriptConac=document.createElement('script');
+scriptConac.type='text/javascript';
+scriptConac.async=true;
+scriptConac.src="https://dcs.conac.cn/js/33/000/0000/40672372/CA330000000406723720001.js";
+var spanConac=document.getElementById("_ideConac");
+spanConac.parentNode.insertBefore(scriptConac,spanConac);
+})(); 
+</script>
+</div>
+<!-- PHPStat Start 详细 -->
+<script language="javascript">var __$nodeid=GetChannelID('758');var __$contentid='2792';var __$title='中华人民共和国飞行基本规则';var __$AuthorPh='';var __$Editor='';var __$Liability='Administrator';var __$pubtime='2001-07-27 00:00:00';var __$source='';
+</script>
+<script language="JavaScript" charset="utf-8" src="/phpstat/count/10000021/10000021.js"></script><noscript><img src="/phpstat/count/10000021/10000021.php" alt="" style="border:0" /></noscript>
+<!-- /PHPStat End -->
+
+<!-- PHPStat Start 办文单位 -->
+<script language="javascript">var __$nodeid=GetChannelID('');var __$contentid='2792';var __$title='中华人民共和国飞行基本规则';var __$AuthorPh='';var __$Editor='';var __$Liability='Administrator';var __$pubtime='2001-07-27 00:00:00';var __$source='';
+</script>
+<script language="JavaScript" charset="utf-8" src="/phpstat/count/10000021/10000021.js"></script><noscript><img src="/phpstat/count/10000021/10000021.php" alt="" style="border:0" /></noscript>
+<!-- /PHPStat End -->
+
+<!-- 适老化改造 -->
+<script type="text/javascript" src="/images/esdToolsInit.js"></script>
+<!--side-->
+   <style type="text/css">
+      .fix_tips .bdsharebuttonbox .bds_more {
+         display: block !important;
+         margin: 0 0 3px 14px !important;
+         width: 50px !important;
+         height: 50px !important;    
+         background: url(/images/50_icon.png) no-repeat !important;
+         background-position: 0 -150px !important; 
+         padding-left:0px !important;   
+    }
+    .bdshare_dialog_bottom{display:none !important;}
+	.fix05{background:url(/images/xcdyzf.png) no-repeat !important;    margin-bottom: 3px;
+    top: -3px;
+    position: relative;}
+    .bdshare_popup_box{display:none !important}
+	
+	
+	
+	.ico_size{
+		width:32px;
+		height:32px;
+	}
+	.social-share .icon-wechat .wechat-qrcode {
+		display:none;
+		border:1px solid #eee;
+		position:absolute;
+		z-index:9;
+		top:-170px;
+		left:105px;
+		width:200px;
+		height:192px;
+		color:#666;
+		font-size:12px;
+		text-align:center;
+		background-color:#fff;
+		box-shadow:0 2px 10px #aaa;
+		transition:all 200ms;
+		-webkit-tansition:all 350ms;
+		-moz-transition:all 350ms
+	}
+	.social-share .icon-wechat .wechat-qrcode.bottom {
+		top:40px;
+		left:-84px
+	}
+	.social-share .icon-wechat .wechat-qrcode.bottom:after {
+		display:none
+	}
+	.social-share .icon-wechat .wechat-qrcode h4 {
+		font-weight:normal;
+		height:26px;
+		line-height:26px;
+		font-size:12px;
+		background-color:#f3f3f3;
+		margin:0;
+		padding:0;
+		color:#777
+	}
+	.social-share .icon-wechat .wechat-qrcode .qrcode {
+		width:105px;
+		margin:10px auto
+	}
+	.social-share .icon-wechat .wechat-qrcode .qrcode table {
+		margin:0 !important
+	}
+	.social-share .icon-wechat .wechat-qrcode .help p {
+		font-weight:normal;
+		line-height:16px;
+		padding:0;
+		margin:0
+	}
+	.social-share .icon-wechat .wechat-qrcode:after {
+		content:'';
+		position:absolute;
+		left:50%;
+		margin-left:-6px;
+		bottom:-13px;
+		width:0;
+		height:0;
+		border-width:8px 6px 6px 6px;
+		border-style:solid;
+		border-color:#fff transparent transparent transparent
+	}
+/*
+	.social-share .icon-wechat:hover .wechat-qrcode {
+		display:block
+	}
+*/
+
+	.wechat-display{
+		display:block !important;
+	}	
+	a.bshareDiv, #bsPanel, #bsMorePanel, #bshareF {
+		border: none;
+		background: none;
+		padding: 0;
+		margin: 0;
+		font: 12px Helvetica,Calibri,Tahoma,Arial,宋体,sans-serif;
+		line-height: 14px;
+	}
+	#bsPanel {
+		position: fixed;
+		left: 0px;
+                  right: 0px;
+		top: 0px;
+		bottom: 0px;
+		height: 180px;
+                  margin:auto;		
+                  z-index: 100000000;
+		font-size: 12px;
+		width: 258px;
+		padding: 6px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	div.bsTitle {
+		padding: 0 8px;
+		border-bottom: 1px solid #e8e8e8;
+		color: #666;
+		background: #f2f2f2;
+		text-align: left;
+	}
+	a.bsSiteLink {
+		text-decoration: none;
+		color: #666;
+	}
+	div.bsClear {
+		clear: both;
+		height: 0;
+		line-height: 0;
+		font-size: 0;
+		overflow: hidden;
+	}
+	div.bsLogoSel, div.bsRlogoSel {
+		border: 1px solid #ddd;
+		background: #f1f1f1;
+	}
+	div.bsRlogo, div.bsRlogoSel {
+		width: 90px;
+		float: left;
+		margin: 0;
+		padding: 2px 0;
+	}
+	/*div.bsRlogo, div.bsRlogoSel {
+		width: 68px;
+		float: left;
+		margin: 0;
+		padding: 2px 0;
+	}*/
+	div.bsLogoSel a, div.bsRlogoSel a {
+		color: #000;
+		border: none;
+	}
+	div.bsLogo, div.bsRlogo {
+		border: 1px solid #fff;
+		background: #fff;
+	}
+	div.bsLogo a, div.bsRlogo a {
+		color: #666;
+		border: none;
+	}
+	div.bsRlogo a, div.bsRlogoSel a {
+		float: left;
+	}
+    </style> 
+<div class="fix_tips">
+    <i class="f_close" id="f_close"></i>
+    <ul>
+        <li ><a href="http://www.caac.gov.cn/INDEX/YDKHDXZ/" target="_blank"><i class="fix05" style="margin-top: 10px;width:60px;height:60px;background:url(/images/2wm.png) no-repeat !important;background-size: cover;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/2wm.png',sizingMethod='scale');background-size:60px 60px !important;top: 3px;"></i><span style="margin-top: 5px;">移动客户端</span></a></li>
+        <!--<li ><a href="http://www.caac.gov.cn/INDEX/HLFW/DZKPYZ/" target="_blank"><i class="fix05"></i><span>电子客票验真</span></a></li>
+       <li><a href="https://liuyan.www.gov.cn/2021wxzlsjh/index.htm"  target="_blank" style="padding: 4px 0;font-size:13px;" id="aWXZLSJH"><img src="../../../images/WXZLSJH_2021.jpg" style="width:72px;" /><span style="line-height:17px;padding-top:5px;">我向总理<br>说句话</span></a></li>-->
+       <li><a href="https://tousu.www.gov.cn/dc/index.htm" target="_blank" id="aXCX"><img src="http://www.caac.gov.cn/images/GWYXCX_2019.jpg" style="width:50px;" /></img><span style="line-height: 16px;">国务院<br>互联网+督查</span></a></li>
+<div id="divXCX" style="display:none;position: absolute;right: 100px;top: 150px;"><img src="http://www.caac.gov.cn/images/GWYXCX_2019.jpg" style="width: 150px;" /></div>
+<div id="divWXZLSJH" style="display:none;position: absolute;right: 100px;top: 100px;"><img src="../../../images/WXZLSJH_2021.jpg" style="width: 200px;" /></div>
+
+        <li style="background:#f6f6f6"> 
+			<div class="bdsharebuttonbox">                            
+                <A class="bds_more" id="rightFolat" href="javascript:void(0)"></A>
+            </div>
+			<span style="margin-left:27px">
+				分享
+			</span>
+		</li>
+    </ul>
+</div>
+
+<div id="bsPanel" style="display:none;background: url(/images/background-opaque-dark.png);">
+	<div class="bsTitle">
+		<a style="float:left;height:20px;line-height:20px;font-weight:bold;" class="bsSiteLink" target="_blank" >分享到</a>
+		<a class="bsSiteLink" style="cursor:pointer;float:right;height:20px;line-height:20px;font-weight:bold;" onclick="shareHide();">X</a>
+		<div class="bsClear"></div>
+	</div>
+	<div style="background:#fff;">
+		<div id="icons" class="social-share" data-initialized="true" style="padding-left: 40px;padding-top: 20px;padding-bottom: 15px;">
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'" style="display:none;">
+				<a href="javascript:;" class="icon-peoplemb" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/peoplemb.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						人民微博
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'">
+				<a href="javascript:;" class="icon-wechat" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/weixin.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						微信
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'">
+				<a href="javascript:;" class="icon-weibo" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/sinaminiblog.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						新浪微博
+					</div>
+				</a>
+			</div>
+
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'" style="margin-top:5px;">
+				<a href="javascript:;" class="icon-qzone" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/qzone.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						QQ空间
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'" style="margin-top:5px;display:none;">
+				<a href="javascript:;" class="icon-renren" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/renren.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						人人网
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'" style="margin-top:5px;">
+				<a href="javascript:;" class="icon-douban" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/douban.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						豆瓣网
+					</div>
+				</a>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+</div>
+
+<script src="../../../images/social-share.js"></script>
+<script src="../../../images/qrcode.js"></script>
+<script type="text/javascript">
+    function setShareItem(){
+        var docchannelid = '758'==''?'758':'758';
+        var docchannelName = '法律法规'==''?'法律法规':'法律法规';
+        var docid = '2792'==''?'758':'2792';
+        var docName ='中华人民共和国飞行基本规则'==''?'中国民用航空局--法律法规':'中华人民共和国飞行基本规则';
+        var docUrl = window.location.href;
+        var siteid='9';
+
+        var url = config.backstageURL + "/jsonp/sharelog/savelog";
+        var data = new Object();
+        data.channelId=docchannelid;
+        data.docId=docid;
+        data.docTitle=docName;
+        data.docUrl=docUrl;
+        data.channelName = docchannelName;
+        data.siteId=siteid;
+
+        jQuery.support.cors = true;
+        jQuery.ajax({
+            type:"GET",
+            url:url,
+            data:data,
+            dataType: "jsonp",
+            jsonp: "callbackparam", //服务端用于接收callback调用的function名的参数
+            jsonpCallback: "logback", //callback的function名称,服务端会把名称和data一起传递回来
+            success: function(json) {
+                //alert('');
+            },
+            error: function(){}
+        });
+    }
+
+    $(function(){
+       //关闭右侧
+       $("#f_close").click(function(){
+              $(this).parent().hide();						   
+       });
+        // 6个分享
+		$("#icons a").off("click");
+		$("#icons a").on("click",function(){
+			setShareItem();
+		});
+
+        $(".icon-wechat").on("click",function(){
+              $(".wechat-qrcode").addClass("wechat-display");
+        }).mouseout(function(){
+              $(".wechat-qrcode").removeClass("wechat-display");
+        });		
+
+		$(document).bind("click",function(e){
+                   if($(e.target).closest('#rightFolat').length==0&&$(e.target).closest('#bsPanel').length==0&&$(e.target).closest('#shareView').length==0&&$(e.target).closest('.bsTitle').length==0&&$(e.target).closest('#icons').length==0&&$(e.target).closest('.bsRlogo').length==0&&$(e.target).closest('.bsRlogoSel').length==0&&$(e.target).closest('.ico_size').length==0&&$(e.target).closest('.icon-peoplemb').length==0&&$(e.target).closest('.icon-weibo').length==0&&$(e.target).closest('.icon-wechat').length==0&&$(e.target).closest('.icon-qzone').length==0&&$(e.target).closest('.icon-renren').length==0&&$(e.target).closest('.icon-douban').length==0&&e.target.nodeName!="BODY"){
+                                        
+                        $("#bsPanel").hide();
+                      
+                   }
+                });
+		
+		shareConfig();
+		shareView();
+$("#aXCX").hover(function(){$("#divXCX").show();},function(){$("#divXCX").hide();});
+$("#aWXZLSJH").hover(function(){$("#divWXZLSJH").show();},function(){$("#divWXZLSJH").hide();});
+
+
+    })
+	
+	function shareConfig(){
+		var title =  $("title").html();
+		$("#icons").attr("data-title",title);
+		$("#icons").attr("data-description",title);
+	}
+	
+	function shareView(){
+		$("#shareView,#rightFolat").off("click");
+		$("#shareView,#rightFolat").on("click",function(){
+			$("#bsPanel").show();
+                   });
+
+	}
+
+	function shareHide(){
+		$("#bsPanel").hide();
+	}
+
+</script>
+</div>
+</body>
+
+</html>

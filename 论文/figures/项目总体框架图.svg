@@ -1,0 +1,147 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+    <style>
+      .title { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-size: 30px; font-weight: 700; fill:#111; }
+      .subtitle { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-size: 18px; fill:#444; }
+      .stage { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-size: 22px; font-weight:700; fill:#111; writing-mode: vertical-rl; glyph-orientation-vertical: 0; }
+      .box { fill:#fff; stroke:#222; stroke-width:2; }
+      .group { fill:none; stroke:#333; stroke-width:2; stroke-dasharray:10 7; }
+      .label { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-size: 19px; fill:#111; text-anchor:middle; dominant-baseline:middle; }
+      .small { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-size: 16px; fill:#333; text-anchor:middle; dominant-baseline:middle; }
+      .group-title { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-size: 21px; font-weight:700; fill:#111; }
+      .line { stroke:#222; stroke-width:2; fill:none; marker-end:url(#arrow); }
+      .thin { stroke:#555; stroke-width:1.7; fill:none; marker-end:url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="2200" fill="#fff"/>
+  <text x="800" y="48" class="title" text-anchor="middle">基于知识图谱增强检索生成的低空经济无人机法律智能问答系统框架</text>
+  <text x="800" y="80" class="subtitle" text-anchor="middle">Knowledge Graph Enhanced RAG for Low-altitude Economy Drone Law Question Answering</text>
+
+  <!-- left vertical workflow -->
+  <rect x="42" y="130" width="84" height="120" class="box"/><text x="84" y="190" class="stage">研究目标</text>
+  <rect x="42" y="370" width="84" height="120" class="box"/><text x="84" y="430" class="stage">数据采集</text>
+  <rect x="42" y="650" width="84" height="120" class="box"/><text x="84" y="710" class="stage">知识建模</text>
+  <rect x="42" y="980" width="84" height="150" class="box"/><text x="84" y="1055" class="stage">知识图谱构建</text>
+  <rect x="42" y="1430" width="84" height="150" class="box"/><text x="84" y="1505" class="stage">检索与问答</text>
+  <rect x="42" y="1900" width="84" height="150" class="box"/><text x="84" y="1975" class="stage">评测与应用</text>
+  <path d="M84 250 L84 370" class="line"/>
+  <path d="M84 490 L84 650" class="line"/>
+  <path d="M84 770 L84 980" class="line"/>
+  <path d="M84 1130 L84 1430" class="line"/>
+  <path d="M84 1580 L84 1900" class="line"/>
+
+  <!-- 1 research objectives -->
+  <rect x="180" y="120" width="1360" height="190" class="group"/>
+  <text x="205" y="150" class="group-title">一、研究目标与理论基础</text>
+  <rect x="250" y="185" width="280" height="70" class="box"/><text x="390" y="220" class="label">低空经济法律问答需求</text>
+  <rect x="620" y="185" width="280" height="70" class="box"/><text x="760" y="220" class="label">知识图谱与RAG理论</text>
+  <rect x="990" y="185" width="280" height="70" class="box"/><text x="1130" y="220" class="label">系统设计目标</text>
+  <rect x="1320" y="185" width="150" height="70" class="box"/><text x="1395" y="220" class="small">可解释、可追溯、时效感知</text>
+  <path d="M530 220 L620 220" class="thin"/>
+  <path d="M900 220 L990 220" class="thin"/>
+  <path d="M1270 220 L1320 220" class="thin"/>
+
+  <!-- 2 data -->
+  <rect x="180" y="350" width="1360" height="290" class="group"/>
+  <text x="205" y="380" class="group-title">二、多源法律数据采集、Chunk切分与向量索引</text>
+  <rect x="235" y="425" width="240" height="90" class="box"/><text x="355" y="457" class="label">法规与规章</text><text x="355" y="486" class="small">法律、行政法规、部门规章</text>
+  <rect x="515" y="425" width="240" height="90" class="box"/><text x="635" y="457" class="label">国家标准与规范</text><text x="635" y="486" class="small">运行、适航、实名登记</text>
+  <rect x="795" y="425" width="240" height="90" class="box"/><text x="915" y="457" class="label">地方性法规</text><text x="915" y="486" class="small">省市低空经济政策</text>
+  <rect x="1075" y="425" width="240" height="90" class="box"/><text x="1195" y="457" class="label">司法案例与解读</text><text x="1195" y="486" class="small">案例、答记者问、释义</text>
+  <rect x="1350" y="425" width="145" height="90" class="box"/><text x="1422" y="457" class="label">36题</text><text x="1422" y="486" class="small">评测集</text>
+  <rect x="225" y="535" width="260" height="55" class="box"/><text x="355" y="552" class="label">解析、去重与归一</text><text x="355" y="577" class="small">效力 / 时效 / 来源</text>
+  <rect x="525" y="535" width="260" height="55" class="box"/><text x="655" y="552" class="label">Parent Chunk</text><text x="655" y="577" class="small">一条法条 = Article单元</text>
+  <rect x="825" y="535" width="260" height="55" class="box"/><text x="955" y="552" class="label">Child Chunk</text><text x="955" y="577" class="small">语义分块 + parent_id</text>
+  <rect x="1125" y="535" width="370" height="55" class="box"/><text x="1310" y="552" class="label">Embedding与索引</text><text x="1310" y="577" class="small">BGE-M3→Chroma；文本→BM25</text>
+  <rect x="425" y="602" width="870" height="28" class="box"/><text x="860" y="616" class="small">3701个条款单元 · 5131个Child Chunk · 通过parent_id回溯法条原文</text>
+  <path d="M355 515 L355 535" class="thin"/>
+  <path d="M635 515 L635 525 L485 525 L485 535" class="thin"/>
+  <path d="M915 515 L915 525 L485 525" class="thin"/>
+  <path d="M1195 515 L1195 525 L485 525" class="thin"/>
+  <path d="M485 562 L525 562" class="thin"/>
+  <path d="M785 562 L825 562" class="thin"/>
+  <path d="M1085 562 L1125 562" class="thin"/>
+  <path d="M1310 590 L1310 616 L1295 616" class="thin"/>
+
+  <!-- 3 modeling -->
+  <rect x="180" y="640" width="1360" height="290" class="group"/>
+  <text x="205" y="670" class="group-title">三、领域本体与法律知识建模</text>
+  <rect x="235" y="720" width="300" height="130" class="box"/>
+  <text x="385" y="752" class="label">实体类型设计</text>
+  <text x="385" y="785" class="small">法规、条款、术语、机型</text>
+  <text x="385" y="812" class="small">主体、活动、法律后果、案例</text>
+  <rect x="650" y="720" width="300" height="130" class="box"/>
+  <text x="800" y="752" class="label">关系类型设计</text>
+  <text x="800" y="785" class="small">属于、引用、定义、适用于</text>
+  <text x="800" y="812" class="small">义务主体、违反后果、取代</text>
+  <rect x="1065" y="720" width="300" height="130" class="box"/>
+  <text x="1215" y="752" class="label">法律属性建模</text>
+  <text x="1215" y="785" class="small">效力层级、发布日期、生效日期</text>
+  <text x="1215" y="812" class="small">时效状态、来源与证据</text>
+  <rect x="505" y="875" width="590" height="36" class="box"/><text x="800" y="893" class="small">本体约束 + 受控词表 + 条款事件结构（主体—行为—条件—后果）</text>
+  <path d="M385 850 L385 875 L505 875" class="thin"/>
+  <path d="M800 850 L800 875" class="thin"/>
+  <path d="M1215 850 L1215 875 L1095 875" class="thin"/>
+
+  <!-- 4 construction -->
+  <rect x="180" y="970" width="1360" height="400" class="group"/>
+  <text x="205" y="1000" class="group-title">四、知识抽取、融合与图谱构建</text>
+  <rect x="235" y="1055" width="260" height="100" class="box"/><text x="365" y="1087" class="label">规则抽取</text><text x="365" y="1120" class="small">正则、词典、条款编号</text>
+  <rect x="555" y="1055" width="260" height="100" class="box"/><text x="685" y="1087" class="label">大语言模型抽取</text><text x="685" y="1120" class="small">实体、属性、关系、事件</text>
+  <rect x="875" y="1055" width="260" height="100" class="box"/><text x="1005" y="1087" class="label">实体对齐与消歧</text><text x="1005" y="1120" class="small">别名归一、跨源去重</text>
+  <rect x="1195" y="1055" width="260" height="100" class="box"/><text x="1325" y="1087" class="label">质量校验</text><text x="1325" y="1120" class="small">Schema、规则、人工复核</text>
+  <rect x="445" y="1200" width="720" height="82" class="box"/>
+  <text x="805" y="1230" class="label">法律知识图谱</text>
+  <text x="805" y="1260" class="small">107部法规 · 531个案例 · 6650个节点 · 12489条边</text>
+  <rect x="545" y="1310" width="520" height="36" class="box"/><text x="805" y="1328" class="small">Neo4j图数据库 / Cypher查询 / 多关系异构图</text>
+  <path d="M365 1155 L365 1200 L445 1200" class="thin"/>
+  <path d="M685 1155 L685 1200" class="thin"/>
+  <path d="M1005 1155 L1005 1200" class="thin"/>
+  <path d="M1325 1155 L1325 1200 L1165 1200" class="thin"/>
+  <path d="M805 1282 L805 1310" class="thin"/>
+
+  <!-- 5 retrieval and QA -->
+  <rect x="180" y="1410" width="1360" height="405" class="group"/>
+  <text x="205" y="1440" class="group-title">五、知识图谱增强的混合检索与问答生成</text>
+  <rect x="235" y="1495" width="235" height="85" class="box"/><text x="352" y="1528" class="label">用户问题</text><text x="352" y="1555" class="small">自然语言提问</text>
+  <rect x="520" y="1495" width="235" height="85" class="box"/><text x="637" y="1528" class="label">问题理解</text><text x="637" y="1555" class="small">实体识别与意图分类</text>
+  <rect x="805" y="1495" width="235" height="85" class="box"/><text x="922" y="1528" class="label">混合召回</text><text x="922" y="1555" class="small">BGE-M3 + BM25 + RRF</text>
+  <rect x="1090" y="1495" width="235" height="85" class="box"/><text x="1207" y="1528" class="label">精排与过滤</text><text x="1207" y="1555" class="small">Reranker + 仅现行有效</text>
+  <rect x="1370" y="1495" width="125" height="85" class="box"/><text x="1432" y="1528" class="label">图扩展</text><text x="1432" y="1555" class="small">1-2跳</text>
+  <path d="M470 1537 L520 1537" class="thin"/><path d="M755 1537 L805 1537" class="thin"/><path d="M1040 1537 L1090 1537" class="thin"/><path d="M1325 1537 L1370 1537" class="thin"/>
+  <rect x="520" y="1650" width="805" height="95" class="box"/>
+  <text x="922" y="1682" class="label">证据约束的LLM生成</text>
+  <text x="922" y="1715" class="small">只依据检索条文作答 · 强制法规名/条号引用 · 不编造依据</text>
+  <path d="M1432 1580 L1432 1620 L1325 1620 L1325 1650" class="thin"/>
+  <path d="M922 1580 L922 1650" class="thin"/>
+  <rect x="360" y="1760" width="1120" height="36" class="box"/><text x="920" y="1778" class="small">答案输出：结论 + 适用条件 + 法律依据 + 处罚/责任 + 引用来源 + 时效提示</text>
+  <path d="M922 1745 L922 1760" class="thin"/>
+
+  <!-- 6 evaluation -->
+  <rect x="180" y="1855" width="1360" height="280" class="group"/>
+  <text x="205" y="1885" class="group-title">六、系统评测与应用展示</text>
+  <rect x="235" y="1935" width="280" height="100" class="box"/><text x="375" y="1967" class="label">检索层评测</text><text x="375" y="2000" class="small">Hit@k、Recall@k、MRR、nDCG</text>
+  <rect x="605" y="1935" width="280" height="100" class="box"/><text x="745" y="1967" class="label">生成层评测</text><text x="745" y="2000" class="small">忠实度、正确性、时效性、引用</text>
+  <rect x="975" y="1935" width="280" height="100" class="box"/><text x="1115" y="1967" class="label">应用层</text><text x="1115" y="2000" class="small">Web问答、引用溯源、图谱展示</text>
+  <rect x="1300" y="1935" width="175" height="100" class="box"/><text x="1387" y="1967" class="label">迭代优化</text><text x="1387" y="2000" class="small">失败案例分析</text>
+  <path d="M515 1985 L605 1985" class="thin"/>
+  <path d="M885 1985 L975 1985" class="thin"/>
+  <path d="M1255 1985 L1300 1985" class="thin"/>
+  <path d="M1115 2035 L1115 2085 L805 2085 L805 2135" class="line"/>
+  <rect x="565" y="2128" width="480" height="48" class="box"/><text x="805" y="2152" class="small">评测反馈 → 检索、图谱与提示词持续优化</text>
+
+  <!-- vertical cross-stage links -->
+  <path d="M860 310 L860 350" class="line"/>
+  <path d="M860 600 L860 640" class="line"/>
+  <path d="M860 930 L860 970" class="line"/>
+  <path d="M860 1370 L860 1410" class="line"/>
+  <path d="M860 1815 L860 1855" class="line"/>
+
+  <!-- footer -->
+  <text x="800" y="2195" class="subtitle" text-anchor="middle">图：低空经济无人机法律智能问答系统总体框架</text>
+</svg>
+

@@ -1,0 +1,26 @@
+# ============================================================
+#  无人机法律智能问答系统 —— Python 依赖
+#  环境：Python 3.8（部分库版本被 3.8 锁定，见注释）
+#  安装：pip install -r requirements.txt
+# ============================================================
+
+# ---------- 【核心】问答系统运行时（server.py / qa.py / search.py） ----------
+openai                      # OpenAI 兼容客户端：调 BGE-M3 嵌入 / rerank / GLM 生成
+chromadb==0.4.24            # 向量库（Py3.8 只能装此版纯 wheel，新版需 Rust 编译）
+posthog==2.5.0             # chromadb 遥测依赖，新版用 PEP585 裸泛型会在 Py3.8 崩
+jieba                       # BM25 稀疏检索中文分词
+rank_bm25                   # BM25Okapi 稀疏检索
+neo4j                       # 图多跳扩展（graph_expand.py）
+fastapi                     # Web 后端
+uvicorn                     # ASGI 服务器
+networkx                    # 图导出 graphml（可选）
+
+# ---------- 【数据采集 / 建库】离线阶段，运行问答不需要 ----------
+requests                    # 官网抓取
+beautifulsoup4              # HTML 解析（bs4）
+lxml                        # bs4 解析器（注意：部分政府页需换 html.parser）
+pymupdf                     # fitz：PDF 文字层提取 / 渲染
+pdfminer.six                # 北大法宝 PDF 解析
+pdfplumber                  # 部分 PDF 抽取
+rapidocr-onnxruntime        # 扫描件 OCR（GB42590 等无文字层 PDF）
+playwright                  # 北大法宝 CARSI 登录态抓取（需 playwright install msedge）

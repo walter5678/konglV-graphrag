@@ -1,0 +1,55 @@
+# ============================================================
+#  无人机法律智能问答系统 —— .gitignore
+#  作用：将来手动 git init 时，自动挡住隐私 / 大文件 / 可重建产物
+# ============================================================
+
+# ---------- 隐私（绝对不能公开） ----------
+_私密_请勿上传GitHub/
+# 北大法宝 CARSI 登录态（浏览器 profile，含 cookie，泄露=账号被盗）
+**/.edge_session/
+**/.edge_auto/
+# 侦察 / 登录截图（可能含个人账号页）
+**/*_shot.png
+**/check_shot.png
+
+# ---------- 密钥 / 环境 ----------
+.env
+.env.*
+*.key
+*_secret*
+
+# ---------- 大文件（体积大 / 版权 / 可重新采集） ----------
+*.mp4
+knowledge_base/pkulaw/raw_pdf/
+knowledge_base/pkulaw/out/attachments/
+knowledge_base/pkulaw/out/fulltext_online/
+knowledge_base/law/北大法宝法律法规/
+# 原始 HTML / PDF 采集件（数据采集不公开，只公开采集清单）
+knowledge_base/raw/dikongjie_html/
+knowledge_base/raw/fulltext/
+
+# ---------- 向量库（物理在 C:\Users\...\drone_law_chroma，本就不在项目里） ----------
+知识图谱/5_向量库/chroma_db/
+drone_law_chroma/
+
+# ---------- 可重建的中间产物（如需公开可手动 git add -f） ----------
+**/out/
+!**/out/.gitkeep
+
+# ---------- Python / 临时 ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---------- 编辑器 / 系统 ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 开发临时补丁文件
+*.patch
+.patch_test.txt

@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" agent="claude" version="24.0.0">
+  <diagram id="main-overview" name="① 系统总览(主图)">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== 离线构建泳道 ===== -->
+        <mxCell id="LANE_OFF" value="离线：数据构建" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=28;fillColor=#f5f5f5;strokeColor=#9e9e9e;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="1000" height="380" as="geometry"/></mxCell>
+        <mxCell id="COLLECT" value="📥 多源采集&#10;官网HTML/PDF · OCR&#10;北大法宝 · 地方库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#0277bd;fontSize=12;" vertex="1" parent="LANE_OFF"><mxGeometry x="30" y="150" width="170" height="70" as="geometry"/></mxCell>
+        <mxCell id="CORPUS" value="📚 原始语料库&#10;107部法规 + 531案例" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#388e3c;fontSize=12;" vertex="1" parent="LANE_OFF"><mxGeometry x="230" y="155" width="150" height="60" as="geometry"/></mxCell>
+        <mxCell id="P1" value="① 结构化&#10;3586 单元" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#1b5e20;fontSize=12;fontStyle=1" vertex="1" parent="LANE_OFF"><mxGeometry x="410" y="60" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="P2" value="② LLM 抽取&#10;实体+语义边" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;fontSize=12;fontStyle=1" vertex="1" parent="LANE_OFF"><mxGeometry x="590" y="60" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="P3" value="③ 建图 → Neo4j&#10;6650节点/11557边" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;fontSize=12;fontStyle=1" vertex="1" parent="LANE_OFF"><mxGeometry x="770" y="60" width="180" height="55" as="geometry"/></mxCell>
+        <mxCell id="P4" value="④ 向量库&#10;Chroma 4837 child + BM25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;fontSize=12;fontStyle=1" vertex="1" parent="LANE_OFF"><mxGeometry x="410" y="260" width="200" height="55" as="geometry"/></mxCell>
+        <mxCell id="READY" value="✅ 系统就绪&#10;图库 + 向量库 双库对齐&#10;(parent_id = unit_id)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=2;fontSize=12;fontStyle=1" vertex="1" parent="LANE_OFF"><mxGeometry x="700" y="255" width="220" height="70" as="geometry"/></mxCell>
+
+        <!-- ===== 在线问答泳道 ===== -->
+        <mxCell id="LANE_ON" value="在线：检索问答" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=28;fillColor=#fafafa;strokeColor=#9e9e9e;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="450" width="1000" height="520" as="geometry"/></mxCell>
+        <mxCell id="USER" value="👤 用户输入法律问题" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#5e35b1;fontSize=12;" vertex="1" parent="LANE_ON"><mxGeometry x="60" y="30" width="200" height="45" as="geometry"/></mxCell>
+        <mxCell id="ROUTER" value="🧭 查询路由&#10;分析意图/机型/时效 → 选策略&#10;sparse / dense / hybrid&#10;(细节见图③)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=12;fontStyle=1;dashed=1;" vertex="1" parent="LANE_ON"><mxGeometry x="60" y="105" width="200" height="80" as="geometry"/></mxCell>
+        <mxCell id="RECALL" value="🔍 召回&#10;BGE-M3稠密 + BM25稀疏&#10;RRF融合 (alpha≈0.9)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=12;" vertex="1" parent="LANE_ON"><mxGeometry x="60" y="215" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="FILTER" value="⏳ 时效性过滤&#10;剔除已废止/未生效" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=12;" vertex="1" parent="LANE_ON"><mxGeometry x="60" y="315" width="200" height="50" as="geometry"/></mxCell>
+        <mxCell id="RERANK" value="🎯 精排 rerank&#10;bge-reranker-v2-m3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=12;" vertex="1" parent="LANE_ON"><mxGeometry x="60" y="395" width="200" height="50" as="geometry"/></mxCell>
+        <mxCell id="EXPAND" value="🕸️ 图多跳扩展&#10;Neo4j 关联条款+溯源&#10;(细节见图③)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#880e4f;fontSize=12;dashed=1;" vertex="1" parent="LANE_ON"><mxGeometry x="360" y="390" width="200" height="65" as="geometry"/></mxCell>
+        <mxCell id="CONTEXT" value="📄 构建上下文&#10;主条文全文 + 关联条款" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;fontSize=12;" vertex="1" parent="LANE_ON"><mxGeometry x="360" y="305" width="200" height="55" as="geometry"/></mxCell>
+        <mxCell id="GENERATE" value="🤖 ⑥ LLM 生成&#10;GLM-4-Flash / DeepSeek-V3&#10;只依据条文·带引用·标时效" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;fontSize=12;fontStyle=1" vertex="1" parent="LANE_ON"><mxGeometry x="360" y="205" width="200" height="75" as="geometry"/></mxCell>
+        <mxCell id="OUTPUT" value="📺 SSE 流式输出 + 📎引用来源&#10;结论 + 《法规》第X条 + 时效提示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;fontSize=12;" vertex="1" parent="LANE_ON"><mxGeometry x="360" y="105" width="200" height="70" as="geometry"/></mxCell>
+
+        <!-- ===== 提示：细节参见 ===== -->
+        <mxCell id="NOTE" value="🔎 实现细节分图：&#10;• 图② 离线构建管线 (①②③④ 子步骤)&#10;• 图③ 在线检索细节 (路由分支/双路召回/图扩展降权)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;fontSize=12;align=left;spacingLeft=10;dashed=1;" vertex="1" parent="LANE_ON"><mxGeometry x="640" y="215" width="320" height="120" as="geometry"/></mxCell>
+
+        <!-- ===== 离线边 ===== -->
+        <mxCell id="eo1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_OFF" source="COLLECT" target="CORPUS"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eo2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_OFF" source="CORPUS" target="P1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eo3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_OFF" source="P1" target="P2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eo4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_OFF" source="P2" target="P3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eo5" value="units → 分块" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="LANE_OFF" source="P1" target="P4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eo6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_OFF" source="P3" target="READY"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eo7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_OFF" source="P4" target="READY"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- ===== 跨泳道：就绪→用户 ===== -->
+        <mxCell id="ec1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="READY" target="USER"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- ===== 在线边 ===== -->
+        <mxCell id="en1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="USER" target="ROUTER"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="en2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="ROUTER" target="RECALL"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="en3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="RECALL" target="FILTER"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="en4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="FILTER" target="RERANK"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="en5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="RERANK" target="EXPAND"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="en6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="EXPAND" target="CONTEXT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="en7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="CONTEXT" target="GENERATE"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="en8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="LANE_ON" source="GENERATE" target="OUTPUT"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="offline-detail" name="② 离线构建管线(细节)">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ① 结构化 -->
+        <mxCell id="C_STRUCT" value="① 结构化 (1_结构化/)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#f6fbf6;strokeColor=#1b5e20;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="300" height="360" as="geometry"/></mxCell>
+        <mxCell id="S_RAW" value="📦 chunks_all.json&#10;3594条原始 chunk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#388e3c;fontSize=12;" vertex="1" parent="C_STRUCT"><mxGeometry x="20" y="45" width="260" height="50" as="geometry"/></mxCell>
+        <mxCell id="S_UNIT" value="🧩 structure.py&#10;一条一单元·长条不碎裂&#10;跨源去重·跳草案" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#1b5e20;fontSize=12;" vertex="1" parent="C_STRUCT"><mxGeometry x="20" y="115" width="260" height="65" as="geometry"/></mxCell>
+        <mxCell id="S_NORM" value="🔧 normalize_meta.py&#10;效力层级/时效性归一&#10;补空值+消歧" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#1b5e20;fontSize=12;" vertex="1" parent="C_STRUCT"><mxGeometry x="20" y="200" width="260" height="65" as="geometry"/></mxCell>
+        <mxCell id="S_OUT" value="📄 units_normalized.json&#10;3586 单元 / 107部" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#1b5e20;fontSize=12;fontStyle=1" vertex="1" parent="C_STRUCT"><mxGeometry x="20" y="285" width="260" height="55" as="geometry"/></mxCell>
+
+        <!-- ② LLM抽取 -->
+        <mxCell id="C_EXTRACT" value="② 实体关系抽取 (2_抽取/)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fbf5fc;strokeColor=#4a148c;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="400" y="40" width="300" height="420" as="geometry"/></mxCell>
+        <mxCell id="E_STRUCT" value="🏗️ build_structural.py&#10;结构边:属于(Reg→Sec→Article)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;fontSize=12;" vertex="1" parent="C_EXTRACT"><mxGeometry x="20" y="45" width="260" height="55" as="geometry"/></mxCell>
+        <mxCell id="E_REGEX" value="🔤 build_regex_edges.py&#10;正则边:引用/定义/术语" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;fontSize=12;" vertex="1" parent="C_EXTRACT"><mxGeometry x="20" y="115" width="260" height="55" as="geometry"/></mxCell>
+        <mxCell id="E_LLM" value="🧠 build_llm_extract.py&#10;DeepSeek-V3 抽取&#10;术语/机型/主体/场景/罚则" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;fontSize=12;" vertex="1" parent="C_EXTRACT"><mxGeometry x="20" y="185" width="260" height="65" as="geometry"/></mxCell>
+        <mxCell id="E_VOCAB" value="📖 vocab.py canon()&#10;受控词表归一消歧" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;fontSize=12;" vertex="1" parent="C_EXTRACT"><mxGeometry x="20" y="265" width="260" height="50" as="geometry"/></mxCell>
+        <mxCell id="E_OUT" value="📄 nodes_llm/edges_llm.json&#10;语义边 8392" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;fontSize=12;fontStyle=1" vertex="1" parent="C_EXTRACT"><mxGeometry x="20" y="345" width="260" height="50" as="geometry"/></mxCell>
+
+        <!-- ③ 建图 -->
+        <mxCell id="C_GRAPH" value="③ 知识图谱 (3_建图/ + Neo4j)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#f0faf8;strokeColor=#00695c;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="760" y="40" width="320" height="440" as="geometry"/></mxCell>
+        <mxCell id="G_BUILD" value="⚙️ build_graph.py&#10;节点/边合并 → cypher" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;fontSize=12;" vertex="1" parent="C_GRAPH"><mxGeometry x="20" y="45" width="280" height="50" as="geometry"/></mxCell>
+        <mxCell id="G_CYPHER" value="📜 neo4j_import.cypher&#10;Entity(id)唯一约束+索引" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;fontSize=12;" vertex="1" parent="C_GRAPH"><mxGeometry x="20" y="115" width="280" height="50" as="geometry"/></mxCell>
+        <mxCell id="G_NEO" value="🗄️ Neo4j 图数据库&#10;6650 节点 / 11557 边" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;fontSize=12;fontStyle=1" vertex="1" parent="C_GRAPH"><mxGeometry x="20" y="185" width="280" height="50" as="geometry"/></mxCell>
+        <mxCell id="G_TYPES" value="🏷️ 节点(9类): 法规107/章节437/条文3522&#10;术语192/机型17/主体462/场景399&#10;罚则983/案例531&#10;边(6类): 属于/引用/定义&#10;适用于/义务主体/违反后果" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="C_GRAPH"><mxGeometry x="20" y="255" width="280" height="135" as="geometry"/></mxCell>
+
+        <!-- ④ 向量库 -->
+        <mxCell id="C_VECTOR" value="④ 向量库 (5_向量库/)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fff9f0;strokeColor=#f57c00;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="450" width="660" height="240" as="geometry"/></mxCell>
+        <mxCell id="V_CHUNK" value="✂️ build_chunks.py&#10;父子分块&#10;parent 4053 / child 4837" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;fontSize=12;" vertex="1" parent="C_VECTOR"><mxGeometry x="30" y="90" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="V_EMBED" value="🎯 build_vectordb.py&#10;BGE-M3 嵌入·1024维" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;fontSize=12;" vertex="1" parent="C_VECTOR"><mxGeometry x="260" y="45" width="180" height="55" as="geometry"/></mxCell>
+        <mxCell id="V_CHROMA" value="🧊 Chroma 向量库&#10;4837 child · cosine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;fontSize=12;fontStyle=1" vertex="1" parent="C_VECTOR"><mxGeometry x="460" y="45" width="180" height="55" as="geometry"/></mxCell>
+        <mxCell id="V_BM25" value="🔤 build_bm25.py&#10;jieba+领域词88 → bm25.pkl" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;fontSize=12;fontStyle=1" vertex="1" parent="C_VECTOR"><mxGeometry x="360" y="140" width="280" height="55" as="geometry"/></mxCell>
+
+        <!-- 边 -->
+        <mxCell id="ds1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_STRUCT" source="S_RAW" target="S_UNIT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ds2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_STRUCT" source="S_UNIT" target="S_NORM"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ds3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_STRUCT" source="S_NORM" target="S_OUT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="de1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_EXTRACT" source="E_STRUCT" target="E_OUT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="de2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_EXTRACT" source="E_REGEX" target="E_OUT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="de3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_EXTRACT" source="E_LLM" target="E_VOCAB"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="de4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_EXTRACT" source="E_VOCAB" target="E_OUT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dg1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_GRAPH" source="G_BUILD" target="G_CYPHER"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dg2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_GRAPH" source="G_CYPHER" target="G_NEO"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dg3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_GRAPH" source="G_NEO" target="G_TYPES"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dv1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_VECTOR" source="V_CHUNK" target="V_EMBED"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dv2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_VECTOR" source="V_EMBED" target="V_CHROMA"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dv3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_VECTOR" source="V_CHUNK" target="V_BM25"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- 跨块流转 -->
+        <mxCell id="cross1" value="units 喂入" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=11;endArrow=open;" edge="1" parent="1" source="S_OUT" target="E_STRUCT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="cross2" value="units 喂入" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=11;endArrow=open;" edge="1" parent="1" source="S_OUT" target="V_CHUNK"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="cross3" value="parent_id = unit_id 对齐(GraphRAG合流点)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;fontSize=11;endArrow=open;strokeColor=#c62828;" edge="1" parent="1" source="V_CHROMA" target="G_NEO"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="online-detail" name="③ 在线检索细节">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 查询路由 -->
+        <mxCell id="USER" value="👤 用户查询" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#5e35b1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="40" y="200" width="140" height="45" as="geometry"/></mxCell>
+        <mxCell id="ROUTER" value="🧭 查询路由分析&#10;意图/机型/时效/是否需多跳" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=12;fontStyle=1" vertex="1" parent="1"><mxGeometry x="210" y="195" width="210" height="55" as="geometry"/></mxCell>
+        <mxCell id="ROUTE" value="🎯 路由决策" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=12;fontStyle=1" vertex="1" parent="1"><mxGeometry x="470" y="180" width="150" height="90" as="geometry"/></mxCell>
+        <mxCell id="M_SPARSE" value="🔤 sparse&#10;纯BM25·免key保底&#10;(精确条号/关键词)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=12;" vertex="1" parent="1"><mxGeometry x="680" y="80" width="180" height="60" as="geometry"/></mxCell>
+        <mxCell id="M_DENSE" value="📊 dense&#10;纯向量语义&#10;(语义/概念查询)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=12;" vertex="1" parent="1"><mxGeometry x="680" y="195" width="180" height="60" as="geometry"/></mxCell>
+        <mxCell id="M_HYBRID" value="🔍 hybrid (默认)&#10;双路融合&#10;(复杂/关系查询)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=12;fontStyle=1" vertex="1" parent="1"><mxGeometry x="680" y="310" width="180" height="60" as="geometry"/></mxCell>
+
+        <!-- 混合召回流程 -->
+        <mxCell id="C_RECALL" value="🔍 混合召回流程 (search.py)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#f2fafe;strokeColor=#01579b;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="420" width="640" height="360" as="geometry"/></mxCell>
+        <mxCell id="R_DENSE" value="📊 稠密召回&#10;BGE-M3 → Chroma&#10;语义相似" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=12;" vertex="1" parent="C_RECALL"><mxGeometry x="40" y="55" width="230" height="65" as="geometry"/></mxCell>
+        <mxCell id="R_SPARSE" value="🔤 稀疏召回&#10;BM25 关键词&#10;精确措辞·免key" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=12;" vertex="1" parent="C_RECALL"><mxGeometry x="40" y="145" width="230" height="65" as="geometry"/></mxCell>
+        <mxCell id="R_RRF" value="⚖️ RRF 融合&#10;alpha≈0.9 稠密优先&#10;(语料同质,权威国家条文优先)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=12;fontStyle=1" vertex="1" parent="C_RECALL"><mxGeometry x="340" y="90" width="250" height="75" as="geometry"/></mxCell>
+        <mxCell id="R_PARENT" value="📄 父文档回溯&#10;child命中 → parent全文" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=12;" vertex="1" parent="C_RECALL"><mxGeometry x="340" y="225" width="250" height="60" as="geometry"/></mxCell>
+
+        <!-- 图多跳扩展 -->
+        <mxCell id="C_XPAND" value="🕸️ 图多跳扩展 (graph_expand.py)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fdf2f7;strokeColor=#880e4f;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="740" y="420" width="340" height="360" as="geometry"/></mxCell>
+        <mxCell id="X_SEED" value="🌱 种子&#10;主命中Article的parent_id" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#880e4f;fontSize=12;" vertex="1" parent="C_XPAND"><mxGeometry x="30" y="45" width="280" height="50" as="geometry"/></mxCell>
+        <mxCell id="X_HOP" value="🔄 Neo4j 1跳扩展&#10;引用(双向) + 共享实体&#10;(适用于/定义/义务主体)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#880e4f;fontSize=12;" vertex="1" parent="C_XPAND"><mxGeometry x="30" y="115" width="280" height="65" as="geometry"/></mxCell>
+        <mxCell id="X_WEIGHT" value="📉 稀有度降权&#10;引用边×3&#10;高频机型 1/log2(2+deg)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#880e4f;fontSize=12;" vertex="1" parent="C_XPAND"><mxGeometry x="30" y="200" width="280" height="65" as="geometry"/></mxCell>
+        <mxCell id="X_TRACE" value="🧭 溯源标注&#10;经《种子》第X条·共享「实体」" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#880e4f;fontSize=12;" vertex="1" parent="C_XPAND"><mxGeometry x="30" y="285" width="280" height="50" as="geometry"/></mxCell>
+
+        <!-- 路由边 -->
+        <mxCell id="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="USER" target="ROUTER"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="ROUTER" target="ROUTE"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="ROUTE" target="M_SPARSE"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="ROUTE" target="M_DENSE"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="p5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="ROUTE" target="M_HYBRID"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="p6" value="召回" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=open;" edge="1" parent="1" source="M_HYBRID" target="C_RECALL"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- 召回内部边 -->
+        <mxCell id="cr1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_RECALL" source="R_DENSE" target="R_RRF"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="cr2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_RECALL" source="R_SPARSE" target="R_RRF"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="cr3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_RECALL" source="R_RRF" target="R_PARENT"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- 图扩展内部边 -->
+        <mxCell id="cx1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_XPAND" source="X_SEED" target="X_HOP"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="cx2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_XPAND" source="X_HOP" target="X_WEIGHT"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="cx3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="C_XPAND" source="X_WEIGHT" target="X_TRACE"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- 召回→精排→扩展 串联(跨块) -->
+        <mxCell id="link1" value="→ 时效过滤 → 精排 → 主命中种子" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=open;strokeColor=#01579b;" edge="1" parent="1" source="R_PARENT" target="X_SEED"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
