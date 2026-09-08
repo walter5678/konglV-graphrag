@@ -49,27 +49,18 @@
 ### 1. 启动 Neo4j（图谱库）
 
 ```powershell
-D:\Neo4j\neo4j-community\neo4j-community-2026.06.0\bin\neo4j.bat console
-# 保持此窗口开着；默认端口 7687，用户 neo4j / 密码 12345678
+.bin\neo4j.bat console
+# 保持此窗口开着；默认端口 7687
 ```
 
-首次或图谱重建后需导入数据（数据已就绪，仅换机/清库后需要）：
-
-```powershell
-$cs="D:\Neo4j\neo4j-community\neo4j-community-2026.06.0\bin\cypher-shell.bat"
-& $cs -a bolt://localhost:7687 -u neo4j -p 12345678 "MATCH (n) DETACH DELETE n;"
-& $cs -a bolt://localhost:7687 -u neo4j -p 12345678 -f "知识图谱\3_建图\out\neo4j_import.cypher"
-# ⚠ 必须用 -f 读文件，不能用 Get-Content|管道（PowerShell 管道会破坏 UTF-8 BOM 致语法错）
-```
-
-### 2. 配置密钥（不写盘，只设环境变量）
+### 2. 配置密钥
 
 ```powershell
 # 检索端：SiliconFlow（BGE-M3 嵌入 / rerank）
 $env:SILICONFLOW_API_KEY = "sk-硅基流动的key"
 # 生成端：智谱 GLM-4-Flash（永久免费，默认值，无需再设 BASE_URL/MODEL）
 $env:LLM_API_KEY         = "智谱开放平台的key"
-$env:NEO4J_PASSWORD      = "12345678"
+$env:NEO4J_PASSWORD      = "neo4j密码"
 
 # —— 若想改用别的 OpenAI 兼容生成模型，额外设这两个即可（默认已是智谱 GLM）——
 # $env:LLM_BASE_URL = "https://open.bigmodel.cn/api/paas/v4"   # 智谱(默认)
@@ -93,10 +84,6 @@ python server.py                    # → http://127.0.0.1:8000
 
 ---
 
-## 命令行用法（无界面）
-
-```powershell
-cd 知识图谱\6_问答
 
 # 完整链问答（推荐）
 python qa.py --query "无人机在管制空域飞行需要什么条件？未经批准飞行怎么处罚？" `
